@@ -49,7 +49,7 @@ spec:
   versions:
     - name: v1alpha2
       served: true
-      storage: true
+      storage: false
       "schema":
         "openAPIV3Schema":
           description: Order is a type to represent an Order with an ACME server
@@ -446,7 +446,7 @@ spec:
                   type: string
     - name: v1
       served: true
-      storage: false
+      storage: true
       "schema":
         "openAPIV3Schema":
           description: Order is a type to represent an Order with an ACME server

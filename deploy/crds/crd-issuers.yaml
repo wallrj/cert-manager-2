@@ -45,7 +45,7 @@ spec:
   versions:
     - name: v1alpha2
       served: true
-      storage: true
+      storage: false
       "schema":
         "openAPIV3Schema":
           description: An Issuer represents a certificate issuing authority which can be referenced as part of `issuerRef` fields. It is scoped to a single namespace and can therefore only be referenced by resources within the same namespace.
@@ -3062,7 +3062,7 @@ spec:
                         type: string
     - name: v1
       served: true
-      storage: false
+      storage: true
       "schema":
         "openAPIV3Schema":
           description: An Issuer represents a certificate issuing authority which can be referenced as part of `issuerRef` fields. It is scoped to a single namespace and can therefore only be referenced by resources within the same namespace.

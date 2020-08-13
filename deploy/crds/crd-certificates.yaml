@@ -55,7 +55,7 @@ spec:
   versions:
     - name: v1alpha2
       served: true
-      storage: true
+      storage: false
       "schema":
         "openAPIV3Schema":
           description: "A Certificate resource should be created to ensure an up to date and signed x509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`. \n The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`)."
@@ -876,7 +876,7 @@ spec:
                   type: integer
     - name: v1
       served: true
-      storage: false
+      storage: true
       "schema":
         "openAPIV3Schema":
           description: "A Certificate resource should be created to ensure an up to date and signed x509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`. \n The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`)."
