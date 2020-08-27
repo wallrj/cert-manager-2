@@ -25,6 +25,7 @@ import (
 
 	cmapi "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1"
 	"github.com/jetstack/cert-manager/pkg/util/pki"
+	"github.com/stretchr/testify/assert"
 )
 
 func mustGenerateRSA(t *testing.T, keySize int) crypto.PrivateKey {
@@ -256,6 +257,28 @@ func TestSecretDataAltNamesMatchSpec(t *testing.T) {
 			if !reflect.DeepEqual(violations, test.violations) {
 				t.Errorf("violations did not match, got=%s, exp=%s", violations, test.violations)
 			}
+		})
+	}
+}
+
+func TestRequestMatchesSpec(t *testing.T) {
+
+	type testCase struct {
+		request    *cmapi.CertificateRequest
+		spec       cmapi.CertificateSpec
+		violations []string
+		error      string
+		modifier   func(*testCase)
+	}
+	tests := map[string]testCase{
+		"success": {},
+	}
+
+	for name, test := range tests {
+		t.Run(name, func(t *testing.T) {
+			violations, err := RequestMatchesSpec(test.request, test.spec)
+			assert.EqualError(t, err, test.error)
+			assert.Equal(t, test.violations, violations)
 		})
 	}
 }
