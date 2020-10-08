@@ -23,6 +23,7 @@ import (
 	vcert "github.com/Venafi/vcert/v4"
 	"github.com/Venafi/vcert/v4/pkg/certificate"
 	"github.com/Venafi/vcert/v4/pkg/endpoint"
+	"github.com/Venafi/vcert/v4/pkg/venafi/tpp"
 	corelisters "k8s.io/client-go/listers/core/v1"
 
 	cmapi "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1"
@@ -79,7 +80,19 @@ func New(namespace string, secretsLister corelisters.SecretLister, issuer cmapi.
 	if err != nil {
 		return nil, fmt.Errorf("error creating Venafi client: %s", err.Error())
 	}
-
+	switch t := vcertClient.(type) {
+	case *tpp.Connector:
+		resp, err := t.GetRefreshToken(cfg.Credentials)
+		if err != nil {
+			return nil, err
+		}
+		cfg.Credentials.User = ""
+		cfg.Credentials.Password = ""
+		cfg.Credentials.AccessToken = resp.Access_token
+		if err := t.Authenticate(cfg.Credentials); err != nil {
+			return nil, err
+		}
+	}
 	return &Venafi{
 		namespace:     namespace,
 		secretsLister: secretsLister,
