@@ -17,6 +17,7 @@ limitations under the License.
 package client
 
 import (
+	"errors"
 	"fmt"
 	"time"
 
@@ -31,8 +32,11 @@ import (
 )
 
 const (
-	tppUsernameKey = "username"
-	tppPasswordKey = "password"
+	tppUsernameKey     = "username"
+	tppPasswordKey     = "password"
+	tppAccessTokenKey  = "access-token"
+	tppRefreshTokenKey = "refresh-token"
+	tppClientIDKey     = "client-id"
 
 	defaultAPIKeyKey = "api-key"
 )
@@ -100,6 +104,15 @@ func New(namespace string, secretsLister corelisters.SecretLister, issuer cmapi.
 	}, nil
 }
 
+func countBools(expected bool, inputs ...bool) (count int) {
+	for _, input := range inputs {
+		if input == expected {
+			count++
+		}
+	}
+	return count
+}
+
 // configForIssuer will convert a cert-manager Venafi issuer into a vcert.Config
 // that can be used to instantiate an API client.
 func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLister, namespace string) (*vcert.Config, error) {
@@ -112,9 +125,45 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 			return nil, err
 		}
 
-		username := string(tppSecret.Data[tppUsernameKey])
-		password := string(tppSecret.Data[tppPasswordKey])
-		caBundle := string(tpp.CABundle)
+		accessToken, accessTokenFound := tppSecret.Data[tppAccessTokenKey]
+		clientID, clientIDFound := tppSecret.Data[tppClientIDKey]
+		refreshToken, refreshTokenFound := tppSecret.Data[tppRefreshTokenKey]
+		username, usernameFound := tppSecret.Data[tppUsernameKey]
+		password, passwordFound := tppSecret.Data[tppPasswordKey]
+
+		someAccessTokenCredentialsSupplied := accessTokenFound
+		allAccessTokenCredentialsSupplied := accessTokenFound
+		someRefreshTokenCredentialsSupplied := clientIDFound || refreshTokenFound
+		allRefreshTokenCredentialsSupplied := clientIDFound && refreshTokenFound
+		somePasswordCredentialsSupplied := usernameFound || passwordFound
+		allPasswordCredentialsSupplied := usernameFound && passwordFound
+
+		credentialSetCount := countBools(
+			true,
+			someAccessTokenCredentialsSupplied, someRefreshTokenCredentialsSupplied, somePasswordCredentialsSupplied,
+		)
+		noCredentialSetsSupplied := credentialSetCount == 0
+		multipleCredentialSetsSupplied := credentialSetCount > 1
+
+		switch {
+		case noCredentialSetsSupplied:
+			return nil, errors.New(
+				"missing credentials; " +
+					"please supply username / password " +
+					"or client-id / refresh-token" +
+					"or access-token")
+		case multipleCredentialSetsSupplied:
+			return nil, errors.New(
+				"password based credentials (username / password) and " +
+					"token based credentials (client-id / refresh-token) are mutually exclusive; " +
+					"please supply one or the other")
+		case someAccessTokenCredentialsSupplied && !allAccessTokenCredentialsSupplied:
+			return nil, errors.New("missing access-token credentials; please supply access-token and TODO")
+		case someRefreshTokenCredentialsSupplied && !allRefreshTokenCredentialsSupplied:
+			return nil, errors.New("missing refresh-token credentials; please supply both refresh-token and client-id")
+		case somePasswordCredentialsSupplied && !allPasswordCredentialsSupplied:
+			return nil, errors.New("missing password credentials; please supply both username and password")
+		}
 
 		return &vcert.Config{
 			ConnectorType: endpoint.ConnectorTypeTPP,
@@ -122,10 +171,13 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 			Zone:          venCfg.Zone,
 			// always enable verbose logging for now
 			LogVerbose:      true,
-			ConnectionTrust: caBundle,
+			ConnectionTrust: string(tpp.CABundle),
 			Credentials: &endpoint.Authentication{
-				User:     username,
-				Password: password,
+				User:         string(username),
+				Password:     string(password),
+				ClientId:     string(clientID),
+				RefreshToken: string(refreshToken),
+				AccessToken:  string(accessToken),
 			},
 		}, nil
 	case venCfg.Cloud != nil:
