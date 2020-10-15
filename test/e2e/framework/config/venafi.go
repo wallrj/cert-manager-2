@@ -18,6 +18,8 @@ package config
 
 import (
 	"flag"
+	"fmt"
+	"io/ioutil"
 	"os"
 )
 
@@ -28,10 +30,13 @@ type Venafi struct {
 }
 
 type VenafiTPPConfiguration struct {
-	URL      string
-	Zone     string
-	Username string
-	Password string
+	URL         string
+	Zone        string
+	Username    string
+	Password    string
+	P12FilePath string
+	P12File     []byte
+	P12Password string
 }
 
 type VenafiCloudConfiguration struct {
@@ -53,10 +58,29 @@ func (v *VenafiTPPConfiguration) AddFlags(fs *flag.FlagSet) {
 	fs.StringVar(&v.Zone, "global.venafi-tpp-zone", os.Getenv("VENAFI_TPP_ZONE"), "Zone to use during Venafi TPP end-to-end tests")
 	fs.StringVar(&v.Username, "global.venafi-tpp-username", os.Getenv("VENAFI_TPP_USERNAME"), "Username to use when authenticating with the Venafi TPP instance")
 	fs.StringVar(&v.Password, "global.venafi-tpp-password", os.Getenv("VENAFI_TPP_PASSWORD"), "Password to use when authenticating with the Venafi TPP instance")
+	fs.StringVar(&v.P12FilePath, "global.venafi-tpp-p12-file", os.Getenv("VENAFI_TPP_P12_FILE"), "PKCS#12 archive to use when authenticating with the Venafi TPP instance")
+	fs.StringVar(&v.P12Password, "global.venafi-tpp-p12-password", os.Getenv("VENAFI_TPP_P12_PASSWORD"), "Password for the PKCS#12 archive")
 }
 
-func (v *VenafiTPPConfiguration) Validate() []error {
-	return nil
+func (v *VenafiTPPConfiguration) validateP12Flags() (errors []error) {
+	someP12configuration := v.P12FilePath != "" || v.P12Password != ""
+	if !someP12configuration {
+		return
+	}
+	var err error
+	v.P12File, err = ioutil.ReadFile(v.P12FilePath)
+	if err != nil {
+		errors = append(errors, fmt.Errorf("error reading VENAFI_TPP_P12_FILE %q: %v", v.P12FilePath, err))
+	}
+	return
+}
+
+func (v *VenafiTPPConfiguration) Validate() (errors []error) {
+	errors = append(
+		errors,
+		v.validateP12Flags()...,
+	)
+	return
 }
 
 func (v *VenafiCloudConfiguration) AddFlags(fs *flag.FlagSet) {

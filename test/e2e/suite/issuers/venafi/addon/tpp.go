@@ -80,8 +80,10 @@ func (v *VenafiTPP) Provision() error {
 			Namespace:    v.Namespace,
 		},
 		Data: map[string][]byte{
-			"username": []byte(v.config.Addons.Venafi.TPP.Username),
-			"password": []byte(v.config.Addons.Venafi.TPP.Password),
+			"username":     []byte(v.config.Addons.Venafi.TPP.Username),
+			"password":     []byte(v.config.Addons.Venafi.TPP.Password),
+			"p12-file":     v.config.Addons.Venafi.TPP.P12File,
+			"p12-password": []byte(v.config.Addons.Venafi.TPP.P12Password),
 		},
 	}
 
