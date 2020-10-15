@@ -17,21 +17,29 @@ limitations under the License.
 package client
 
 import (
+	"crypto/tls"
+	"crypto/x509"
+	"encoding/pem"
 	"fmt"
+	"net"
+	"net/http"
 	"time"
 
 	vcert "github.com/Venafi/vcert/v4"
 	"github.com/Venafi/vcert/v4/pkg/certificate"
 	"github.com/Venafi/vcert/v4/pkg/endpoint"
 	corelisters "k8s.io/client-go/listers/core/v1"
+	"software.sslmate.com/src/go-pkcs12"
 
 	cmapi "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1"
 	"github.com/jetstack/cert-manager/pkg/issuer/venafi/client/api"
 )
 
 const (
-	tppUsernameKey = "username"
-	tppPasswordKey = "password"
+	tppUsernameKey    = "username"
+	tppPasswordKey    = "password"
+	tppP12FileKey     = "p12-file"
+	tppP12PasswordKey = "p12-password"
 
 	defaultAPIKeyKey = "api-key"
 )
@@ -103,6 +111,37 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 		password := string(tppSecret.Data[tppPasswordKey])
 		caBundle := string(tpp.CABundle)
 
+		p12File, p12FileFound := tppSecret.Data[tppP12FileKey]
+		p12Password, p12PasswordFound := tppSecret.Data[tppP12PasswordKey]
+		clientP12 := p12FileFound || p12PasswordFound
+
+		blocks, err := pkcs12.ToPEM(p12File, string(p12Password))
+		if err != nil {
+			return nil, fmt.Errorf("Error converting PKCS#12 archive file to PEM blocks: %v", err)
+		}
+
+		var pemData []byte
+		for _, b := range blocks {
+			pemData = append(pemData, pem.EncodeToMemory(b)...)
+		}
+
+		// Construct TLS certificate from PEM data
+		cert, err := tls.X509KeyPair(pemData, pemData)
+		if err != nil {
+			return nil, fmt.Errorf("Error reading PEM data to build X.509 certificate: %v", err)
+		}
+
+		caCertPool := x509.NewCertPool()
+		caCertPool.AppendCertsFromPEM(pemData)
+
+		tlsConfig := &tls.Config{
+			//Set RenegotiateFreelyAsClient in case of we're communicating with MTLS TPP server with only user\password
+			Renegotiation: tls.RenegotiateFreelyAsClient,
+			Certificates:  []tls.Certificate{cert},
+			RootCAs:       caCertPool,
+		}
+		tlsConfig.BuildNameToCertificate()
+
 		return &vcert.Config{
 			ConnectorType: endpoint.ConnectorTypeTPP,
 			BaseUrl:       tpp.URL,
@@ -111,8 +150,25 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 			LogVerbose:      true,
 			ConnectionTrust: caBundle,
 			Credentials: &endpoint.Authentication{
-				User:     username,
-				Password: password,
+				User:         username,
+				Password:     password,
+				ClientPKCS12: clientP12,
+			},
+			Client: &http.Client{
+				Timeout: time.Second * 30,
+				Transport: &http.Transport{
+					Proxy: http.ProxyFromEnvironment,
+					DialContext: (&net.Dialer{
+						Timeout:   30 * time.Second,
+						KeepAlive: 30 * time.Second,
+						DualStack: true,
+					}).DialContext,
+					MaxIdleConns:          100,
+					IdleConnTimeout:       90 * time.Second,
+					TLSHandshakeTimeout:   10 * time.Second,
+					ExpectContinueTimeout: 1 * time.Second,
+					TLSClientConfig:       tlsConfig,
+				},
 			},
 		}, nil
 	case venCfg.Cloud != nil:
