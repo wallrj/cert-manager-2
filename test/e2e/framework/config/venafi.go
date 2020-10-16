@@ -20,6 +20,7 @@ import (
 	"flag"
 	"os"
 
+	"github.com/Venafi/vcert/v4"
 	"github.com/Venafi/vcert/v4/pkg/endpoint"
 	"github.com/jetstack/cert-manager/pkg/issuer/venafi/client"
 )
@@ -60,12 +61,20 @@ func (v *VenafiTPPConfiguration) AddFlags(fs *flag.FlagSet) {
 	fs.StringVar(&v.AccessToken, "global.venafi-tpp-access-token", os.Getenv("VENAFI_TPP_ACCESS_TOKEN"), "Access token to use when authenticating with the Venafi TPP instance")
 }
 
-func (v *VenafiTPPConfiguration) Validate() []error {
-	return client.CheckAuthentication(&endpoint.Authentication{
-		User:        v.Username,
-		Password:    v.Password,
-		AccessToken: v.AccessToken,
+func (v *VenafiTPPConfiguration) Validate() (errs []error) {
+	err := client.CheckConfig(&vcert.Config{
+		BaseUrl: v.URL,
+		Zone:    v.Zone,
+		Credentials: &endpoint.Authentication{
+			User:        v.Username,
+			Password:    v.Password,
+			AccessToken: v.AccessToken,
+		},
 	})
+	if err != nil {
+		errs = append(errs, err)
+	}
+	return
 }
 
 func (v *VenafiCloudConfiguration) AddFlags(fs *flag.FlagSet) {

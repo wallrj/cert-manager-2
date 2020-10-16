@@ -64,15 +64,6 @@ func (v *VenafiTPP) Setup(cfg *config.Config) error {
 		return errors.NewSkip(fmt.Errorf("Venafi TPP Zone must be set"))
 	}
 
-	if v.config.Addons.Venafi.TPP.AccessToken == "" {
-		if v.config.Addons.Venafi.TPP.Username == "" {
-			return errors.NewSkip(fmt.Errorf("Venafi TPP Username must be set"))
-		}
-		if v.config.Addons.Venafi.TPP.Password == "" {
-			return errors.NewSkip(fmt.Errorf("Venafi TPP Password must be set"))
-		}
-	}
-
 	return nil
 }
 

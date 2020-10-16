@@ -160,14 +160,16 @@ func (v *Venafi) SetClient(client endpoint.Connector) {
 	v.vcertClient = client
 }
 
+var ErrInvalidTPPConfig = errors.New("invalid TPP configuration")
+var ErrInvalidCredentials = errors.New("invalid credentials")
 var ErrMissingCredentials = errors.New("missing credentials")
 var ErrIncompatibleCredentials = errors.New("incompatible credentials")
 
-func CheckAuthentication(auth *endpoint.Authentication) []error {
-	var errors []error
+func CheckCredentialsTPP(auth *endpoint.Authentication) error {
+	var errs []error
 	var credentialTypes []string
 	if auth.User != "" || auth.Password != "" {
-		credentialTypes = append(credentialTypes, "username / password")
+		credentialTypes = append(credentialTypes, "username-password")
 	}
 
 	if auth.AccessToken != "" {
@@ -176,10 +178,41 @@ func CheckAuthentication(auth *endpoint.Authentication) []error {
 
 	switch {
 	case len(credentialTypes) == 0:
-		errors = append(errors, ErrMissingCredentials)
+		errs = append(errs, ErrMissingCredentials)
 	case len(credentialTypes) > 1:
-		errors = append(errors, fmt.Errorf("%w: %v", ErrIncompatibleCredentials, credentialTypes))
+		errs = append(errs, fmt.Errorf("%w: %v", ErrIncompatibleCredentials, credentialTypes))
 
 	}
-	return utilerrors.NewAggregate(errors).Errors()
+	if err := utilerrors.NewAggregate(errs); err != nil {
+		return fmt.Errorf("%w: %v", ErrInvalidCredentials, err)
+	}
+	return nil
+}
+
+func CheckConfigTPP(conf *vcert.Config) error {
+	var errs []error
+
+	if conf.BaseUrl == "" {
+		errs = append(
+			errs,
+			fmt.Errorf("")
+		)
+	}
+
+	errs = append(
+		errs,
+		CheckCredentialsTPP(conf.Credentials),
+	)
+	if err := utilerrors.NewAggregate(errs); err != nil {
+		return fmt.Errorf("%w: %v", ErrInvalidTPPConfig, err)
+	}
+	return nil
+}
+
+func CheckConfig(conf *vcert.Config) error {
+	switch conf.ConnectorType {
+	case endpoint.ConnectorTypeTPP:
+		return CheckConfigTPP(conf)
+	}
+	return nil
 }
