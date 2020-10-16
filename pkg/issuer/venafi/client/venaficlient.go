@@ -28,6 +28,7 @@ import (
 	vcert "github.com/Venafi/vcert/v4"
 	"github.com/Venafi/vcert/v4/pkg/certificate"
 	"github.com/Venafi/vcert/v4/pkg/endpoint"
+	"github.com/Venafi/vcert/v4/pkg/venafi/tpp"
 	corelisters "k8s.io/client-go/listers/core/v1"
 	"software.sslmate.com/src/go-pkcs12"
 
@@ -82,10 +83,28 @@ func New(namespace string, secretsLister corelisters.SecretLister, issuer cmapi.
 	if err != nil {
 		return nil, err
 	}
-
+	credentials := *cfg.Credentials
+	if cfg.ConnectorType == endpoint.ConnectorTypeTPP {
+		// TODO: This is a hack to prevent vcert implicitly calling Authenticate()
+		// We call Authenticate later.
+		cfg.Credentials = &endpoint.Authentication{
+			AccessToken: "x",
+		}
+	}
 	vcertClient, err := vcert.NewClient(cfg)
 	if err != nil {
 		return nil, fmt.Errorf("error creating Venafi client: %s", err.Error())
+	}
+
+	switch t := vcertClient.(type) {
+	case *tpp.Connector:
+		r, err := t.GetRefreshToken(&credentials)
+		if err != nil {
+			return nil, fmt.Errorf("error getting token: %v", err)
+		}
+		if err := t.Authenticate(&endpoint.Authentication{AccessToken: r.Access_token}); err != nil {
+			return nil, fmt.Errorf("error setting new access token: %v", err)
+		}
 	}
 
 	return &Venafi{
@@ -115,32 +134,35 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 		p12Password, p12PasswordFound := tppSecret.Data[tppP12PasswordKey]
 		clientP12 := p12FileFound || p12PasswordFound
 
-		blocks, err := pkcs12.ToPEM(p12File, string(p12Password))
-		if err != nil {
-			return nil, fmt.Errorf("Error converting PKCS#12 archive file to PEM blocks: %v", err)
-		}
-
-		var pemData []byte
-		for _, b := range blocks {
-			pemData = append(pemData, pem.EncodeToMemory(b)...)
-		}
-
-		// Construct TLS certificate from PEM data
-		cert, err := tls.X509KeyPair(pemData, pemData)
-		if err != nil {
-			return nil, fmt.Errorf("Error reading PEM data to build X.509 certificate: %v", err)
-		}
-
-		caCertPool := x509.NewCertPool()
-		caCertPool.AppendCertsFromPEM(pemData)
-
 		tlsConfig := &tls.Config{
 			//Set RenegotiateFreelyAsClient in case of we're communicating with MTLS TPP server with only user\password
 			Renegotiation: tls.RenegotiateFreelyAsClient,
-			Certificates:  []tls.Certificate{cert},
-			RootCAs:       caCertPool,
 		}
-		tlsConfig.BuildNameToCertificate()
+
+		if clientP12 {
+			blocks, err := pkcs12.ToPEM(p12File, string(p12Password))
+			if err != nil {
+				return nil, fmt.Errorf("Error converting PKCS#12 archive file to PEM blocks with password %q: %v", string(p12Password), err)
+			}
+
+			var pemData []byte
+			for _, b := range blocks {
+				pemData = append(pemData, pem.EncodeToMemory(b)...)
+			}
+
+			// Construct TLS certificate from PEM data
+			cert, err := tls.X509KeyPair(pemData, pemData)
+			if err != nil {
+				return nil, fmt.Errorf("Error reading PEM data to build X.509 certificate: %v", err)
+			}
+
+			caCertPool := x509.NewCertPool()
+			caCertPool.AppendCertsFromPEM(pemData)
+
+			tlsConfig.Certificates = []tls.Certificate{cert}
+			tlsConfig.RootCAs = caCertPool
+			tlsConfig.BuildNameToCertificate()
+		}
 
 		return &vcert.Config{
 			ConnectorType: endpoint.ConnectorTypeTPP,
@@ -153,6 +175,7 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 				User:         username,
 				Password:     password,
 				ClientPKCS12: clientP12,
+				ClientId:     "cert-manager",
 			},
 			Client: &http.Client{
 				Timeout: time.Second * 30,
