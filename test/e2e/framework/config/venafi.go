@@ -19,6 +19,9 @@ package config
 import (
 	"flag"
 	"os"
+
+	"github.com/Venafi/vcert/v4/pkg/endpoint"
+	"github.com/jetstack/cert-manager/pkg/issuer/venafi/client"
 )
 
 // Venafi global configuration for Venafi TPP/Cloud instances
@@ -58,7 +61,11 @@ func (v *VenafiTPPConfiguration) AddFlags(fs *flag.FlagSet) {
 }
 
 func (v *VenafiTPPConfiguration) Validate() []error {
-	return nil
+	return client.CheckAuthentication(&endpoint.Authentication{
+		User:        v.Username,
+		Password:    v.Password,
+		AccessToken: v.AccessToken,
+	})
 }
 
 func (v *VenafiCloudConfiguration) AddFlags(fs *flag.FlagSet) {

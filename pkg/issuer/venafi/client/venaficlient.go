@@ -17,12 +17,14 @@ limitations under the License.
 package client
 
 import (
+	"errors"
 	"fmt"
 	"time"
 
 	vcert "github.com/Venafi/vcert/v4"
 	"github.com/Venafi/vcert/v4/pkg/certificate"
 	"github.com/Venafi/vcert/v4/pkg/endpoint"
+	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	corelisters "k8s.io/client-go/listers/core/v1"
 
 	cmapi "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1"
@@ -156,4 +158,28 @@ func (v *Venafi) ReadZoneConfiguration() (*endpoint.ZoneConfiguration, error) {
 
 func (v *Venafi) SetClient(client endpoint.Connector) {
 	v.vcertClient = client
+}
+
+var ErrMissingCredentials = errors.New("missing credentials")
+var ErrIncompatibleCredentials = errors.New("incompatible credentials")
+
+func CheckAuthentication(auth *endpoint.Authentication) []error {
+	var errors []error
+	var credentialTypes []string
+	if auth.User != "" || auth.Password != "" {
+		credentialTypes = append(credentialTypes, "username / password")
+	}
+
+	if auth.AccessToken != "" {
+		credentialTypes = append(credentialTypes, "access-token")
+	}
+
+	switch {
+	case len(credentialTypes) == 0:
+		errors = append(errors, ErrMissingCredentials)
+	case len(credentialTypes) > 1:
+		errors = append(errors, fmt.Errorf("%w: %v", ErrIncompatibleCredentials, credentialTypes))
+
+	}
+	return utilerrors.NewAggregate(errors).Errors()
 }
