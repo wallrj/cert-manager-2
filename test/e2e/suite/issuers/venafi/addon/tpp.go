@@ -20,8 +20,11 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/Venafi/vcert/v4/pkg/endpoint"
+	"github.com/Venafi/vcert/v4/pkg/venafi/tpp"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 
 	cmapi "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1"
 	cmmeta "github.com/jetstack/cert-manager/pkg/apis/meta/v1"
@@ -77,6 +80,9 @@ func (v *VenafiTPP) Setup(cfg *config.Config) error {
 }
 
 func (v *VenafiTPP) Provision() error {
+	if err := v.deleteTPPCertificates(); err != nil {
+		return err
+	}
 	secret := &corev1.Secret{
 		ObjectMeta: metav1.ObjectMeta{
 			GenerateName: "cm-e2e-venafi-",
@@ -111,8 +117,35 @@ func (v *VenafiTPP) Details() *TPPDetails {
 	return &v.details
 }
 
+func (v *VenafiTPP) deleteTPPCertificates() error {
+	c, err := tpp.NewConnector(
+		v.config.Addons.Venafi.TPP.URL,
+		v.config.Addons.Venafi.TPP.Zone,
+		false,
+		nil,
+	)
+	if err != nil {
+		return err
+	}
+	if err := c.Authenticate(&endpoint.Authentication{
+		User:        v.config.Addons.Venafi.TPP.Username,
+		Password:    v.config.Addons.Venafi.TPP.Password,
+		AccessToken: v.config.Addons.Venafi.TPP.AccessToken,
+	}); err != nil {
+		return err
+	}
+	var limit = 10
+	if err := c.DeleteCertificates(endpoint.Filter{Limit: &limit}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (v *VenafiTPP) Deprovision() error {
-	return v.Base.Details().KubeClient.CoreV1().Secrets(v.createdSecret.Namespace).Delete(context.TODO(), v.createdSecret.Name, metav1.DeleteOptions{})
+	return utilerrors.NewAggregate([]error{
+		v.Base.Details().KubeClient.CoreV1().Secrets(v.createdSecret.Namespace).Delete(context.TODO(), v.createdSecret.Name, metav1.DeleteOptions{}),
+		v.deleteTPPCertificates(),
+	})
 }
 
 func (v *VenafiTPP) SupportsGlobal() bool {

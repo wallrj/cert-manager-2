@@ -3488,8 +3488,9 @@ def go_repositories():
         build_file_generation = "on",
         build_file_proto_mode = "disable",
         importpath = "github.com/Venafi/vcert/v4",
-        sum = "h1:37gfyjS9v5YvZcIABwNPo1fAC31lIZT7glVK1vfUxk4=",
-        version = "v4.11.0",
+        replace = "github.com/wallrj/vcert/v4",
+        sum = "h1:kr4LuRV+v8YtHQeVsTNOHQgEtlbmnp9gN6mZXk0unO8=",
+        version = "v4.0.0-20201105092157-7f5953c23922",
     )
     go_repository(
         name = "com_google_cloud_go_firestore",
