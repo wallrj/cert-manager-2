@@ -20,7 +20,6 @@ import (
 	"context"
 	"crypto/tls"
 	"errors"
-	"fmt"
 	"io"
 	"net"
 	"net/http"
@@ -30,7 +29,6 @@ import (
 	"golang.org/x/sync/errgroup"
 	admissionv1 "k8s.io/api/admission/v1"
 	apiextensionsinstall "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/install"
-	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -101,7 +99,6 @@ type Server struct {
 
 	ValidationWebhook handlers.ValidatingAdmissionHook
 	MutationWebhook   handlers.MutatingAdmissionHook
-	ConversionWebhook handlers.ConversionHook
 
 	// Log is an optional logger to write informational and error messages to.
 	// If not specified, no messages will be logged.
@@ -231,7 +228,6 @@ func (s *Server) Run(stopCh <-chan struct{}) error {
 	serverMux := http.NewServeMux()
 	serverMux.HandleFunc("/validate", s.handle(s.validate))
 	serverMux.HandleFunc("/mutate", s.handle(s.mutate))
-	serverMux.HandleFunc("/convert", s.handle(s.convert))
 	server := &http.Server{
 		Handler: serverMux,
 	}
@@ -291,19 +287,6 @@ func (s *Server) mutate(ctx context.Context, obj runtime.Object) (runtime.Object
 	}
 	review.Response = s.MutationWebhook.Mutate(ctx, review.Request)
 	return review, nil
-}
-
-func (s *Server) convert(_ context.Context, obj runtime.Object) (runtime.Object, error) {
-	switch review := obj.(type) {
-	case *apiextensionsv1.ConversionReview:
-		if review.Request == nil {
-			return nil, errors.New("review.request was nil")
-		}
-		review.Response = s.ConversionWebhook.Convert(review.Request)
-		return review, nil
-	default:
-		return nil, fmt.Errorf("unsupported conversion review type: %T", review)
-	}
 }
 
 func (s *Server) handle(inner handleFunc) func(w http.ResponseWriter, req *http.Request) {

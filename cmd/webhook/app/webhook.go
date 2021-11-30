@@ -38,7 +38,6 @@ import (
 
 var validationHook handlers.ValidatingAdmissionHook = handlers.NewRegistryBackedValidator(logf.Log, webhook.Scheme, webhook.ValidationRegistry)
 var mutationHook handlers.MutatingAdmissionHook = handlers.NewRegistryBackedMutator(logf.Log, webhook.Scheme, webhook.MutationRegistry)
-var conversionHook handlers.ConversionHook = handlers.NewSchemeBackedConverter(logf.Log, webhook.Scheme)
 
 func NewServerWithOptions(log logr.Logger, opts options.WebhookOptions) (*server.Server, error) {
 	restcfg, err := clientcmd.BuildConfigFromFlags(opts.APIServerHost, opts.Kubeconfig)
@@ -92,7 +91,6 @@ func NewServerWithOptions(log logr.Logger, opts options.WebhookOptions) (*server
 		MinTLSVersion:     opts.MinTLSVersion,
 		ValidationWebhook: validationHook,
 		MutationWebhook:   mutationHook,
-		ConversionWebhook: conversionHook,
 		Log:               log,
 	}, nil
 }
@@ -102,7 +100,7 @@ func NewServerCommand(stopCh <-chan struct{}) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "webhook",
-		Short: fmt.Sprintf("Webhook component providing API validation, mutation and conversion functionality for cert-manager (%s) (%s)", util.AppVersion, util.AppGitCommit),
+		Short: fmt.Sprintf("Webhook component providing API validation and mutation functionality for cert-manager (%s) (%s)", util.AppVersion, util.AppGitCommit),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ctx := cmdutil.ContextWithStopCh(context.Background(), stopCh)
 			ctx = logf.NewContext(ctx, nil, "webhook")
