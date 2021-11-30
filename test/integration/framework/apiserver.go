@@ -56,7 +56,6 @@ func RunControlPlane(t *testing.T, ctx context.Context) (*rest.Config, StopFunc)
 	for _, crd := range crds {
 		t.Logf("Found CRD with name %q", crd.Name)
 	}
-	patchCRDConversion(crds, webhookOpts.URL, webhookOpts.CAPEM)
 
 	if _, err := envtest.InstallCRDs(config, envtest.CRDInstallOptions{
 		CRDs: crds,
@@ -94,34 +93,6 @@ var (
 func init() {
 	utilruntime.Must(metav1.AddMetaToScheme(internalScheme))
 	apiextensionsinstall.Install(internalScheme)
-}
-
-func patchCRDConversion(crds []apiextensionsv1.CustomResourceDefinition, url string, caPEM []byte) {
-	for _, crd := range crds {
-		for i := range crd.Spec.Versions {
-			crd.Spec.Versions[i].Served = true
-		}
-		if crd.Spec.Conversion == nil {
-			continue
-		}
-		if crd.Spec.Conversion.Webhook == nil {
-			continue
-		}
-		if crd.Spec.Conversion.Webhook.ClientConfig == nil {
-			continue
-		}
-		if crd.Spec.Conversion.Webhook.ClientConfig.Service == nil {
-			continue
-		}
-		path := ""
-		if crd.Spec.Conversion.Webhook.ClientConfig.Service.Path != nil {
-			path = *crd.Spec.Conversion.Webhook.ClientConfig.Service.Path
-		}
-		url := fmt.Sprintf("%s%s", url, path)
-		crd.Spec.Conversion.Webhook.ClientConfig.URL = &url
-		crd.Spec.Conversion.Webhook.ClientConfig.CABundle = caPEM
-		crd.Spec.Conversion.Webhook.ClientConfig.Service = nil
-	}
 }
 
 func readCustomResourcesAtPath(t *testing.T, path string) []apiextensionsv1.CustomResourceDefinition {
