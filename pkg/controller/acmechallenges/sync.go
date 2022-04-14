@@ -23,11 +23,7 @@ import (
 
 	acmeapi "golang.org/x/crypto/acme"
 	corev1 "k8s.io/api/core/v1"
-	apiequality "k8s.io/apimachinery/pkg/api/equality"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 
-	internalchallenges "github.com/cert-manager/cert-manager/internal/controller/challenges"
 	"github.com/cert-manager/cert-manager/internal/controller/feature"
 	"github.com/cert-manager/cert-manager/pkg/acme"
 	acmecl "github.com/cert-manager/cert-manager/pkg/acme/client"
@@ -66,21 +62,21 @@ func (c *controller) Sync(ctx context.Context, ch *cmacme.Challenge) (err error)
 	log := logf.FromContext(ctx).WithValues("dnsName", ch.Spec.DNSName, "type", ch.Spec.Type)
 	ctx = logf.NewContext(ctx, log)
 
-	oldChal := ch
 	ch = ch.DeepCopy()
+
+	updater := &updater{
+		cmClient:     c.cmClient,
+		fieldManager: c.fieldManager,
+		err:          err,
+		original:     ch.DeepCopy(),
+		modified:     ch,
+	}
+
+	defer updater.run(ctx)
 
 	if ch.DeletionTimestamp != nil {
 		return c.handleFinalizer(ctx, ch)
 	}
-
-	defer func() {
-		if apiequality.Semantic.DeepEqual(oldChal.Status, ch.Status) {
-			return
-		}
-		if _, updateErr := c.updateStatusOrApply(ctx, ch); updateErr != nil {
-			err = utilerrors.NewAggregate([]error{err, updateErr})
-		}
-	}()
 
 	// bail out early on if processing=false, as this challenge has not been
 	// scheduled yet.
@@ -252,19 +248,7 @@ func (c *controller) handleFinalizer(ctx context.Context, ch *cmacme.Challenge) 
 	}
 
 	defer func() {
-		// call UpdateStatus first as we may have updated the challenge.status.reason field
-		ch, updateErr := c.updateStatusOrApply(ctx, ch)
-		if updateErr != nil {
-			err = utilerrors.NewAggregate([]error{err, updateErr})
-			return
-		}
-		// call Update to remove the metadata.finalizers entry
 		ch.Finalizers = ch.Finalizers[1:]
-		_, updateErr = c.updateOrApply(ctx, ch)
-		if updateErr != nil {
-			err = utilerrors.NewAggregate([]error{err, updateErr})
-			return
-		}
 	}()
 
 	if !ch.Status.Processing {
@@ -423,20 +407,4 @@ func (c *controller) solverFor(challengeType cmacme.ACMEChallengeType) (solver, 
 		return c.dnsSolver, nil
 	}
 	return nil, fmt.Errorf("no solver for %q implemented", challengeType)
-}
-
-func (c *controller) updateOrApply(ctx context.Context, challenge *cmacme.Challenge) (*cmacme.Challenge, error) {
-	if utilfeature.DefaultFeatureGate.Enabled(feature.ServerSideApply) {
-		return internalchallenges.Apply(ctx, c.cmClient, c.fieldManager, challenge)
-	} else {
-		return c.cmClient.AcmeV1().Challenges(challenge.Namespace).Update(ctx, challenge, metav1.UpdateOptions{})
-	}
-}
-
-func (c *controller) updateStatusOrApply(ctx context.Context, challenge *cmacme.Challenge) (*cmacme.Challenge, error) {
-	if utilfeature.DefaultFeatureGate.Enabled(feature.ServerSideApply) {
-		return internalchallenges.ApplyStatus(ctx, c.cmClient, c.fieldManager, challenge)
-	} else {
-		return c.cmClient.AcmeV1().Challenges(challenge.Namespace).UpdateStatus(ctx, challenge, metav1.UpdateOptions{})
-	}
 }
