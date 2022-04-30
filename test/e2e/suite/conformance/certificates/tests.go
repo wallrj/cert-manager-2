@@ -28,10 +28,10 @@ import (
 	networkingv1beta1 "k8s.io/api/networking/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	internalcertificates "github.com/cert-manager/cert-manager/internal/controller/certificates"
 	"github.com/cert-manager/cert-manager/internal/controller/feature"
 	cmapi "github.com/cert-manager/cert-manager/pkg/apis/certmanager/v1"
 	cmmeta "github.com/cert-manager/cert-manager/pkg/apis/meta/v1"
+	cmapply "github.com/cert-manager/cert-manager/pkg/client/applyconfigurations/certmanager/v1"
 	"github.com/cert-manager/cert-manager/pkg/util"
 	utilfeature "github.com/cert-manager/cert-manager/pkg/util/feature"
 	"github.com/cert-manager/cert-manager/pkg/util/pki"
@@ -886,12 +886,17 @@ func (s *Suite) Define() {
 			Expect(err).NotTo(HaveOccurred())
 
 			By("Updating the Certificate after having added an additional dnsName")
-			newDNSName := e2eutil.RandomSubdomain(s.DomainSuffix)
-
-			testCertificate.Spec.DNSNames = append(testCertificate.Spec.DNSNames, newDNSName)
-
-			testCertificate, err = internalcertificates.Apply(ctx, f.Helper().CMClient, fieldManager, testCertificate)
-
+			testCertificate, err = f.Helper().CMClient.CertmanagerV1().Certificates(f.Namespace.Name).Apply(
+				ctx,
+				cmapply.Certificate(testCertificate.Name, testCertificate.Namespace).
+					WithSpec(
+						cmapply.CertificateSpec().WithDNSNames(e2eutil.RandomSubdomain(s.DomainSuffix)),
+					),
+				metav1.ApplyOptions{
+					Force:        true,
+					FieldManager: fieldManager,
+				},
+			)
 			Expect(err).NotTo(HaveOccurred())
 
 			By("Waiting for the Certificate Ready condition to be updated")
