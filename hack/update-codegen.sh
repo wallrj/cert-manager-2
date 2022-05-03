@@ -62,6 +62,12 @@ client_inputs=(
   pkg/apis/acme/v1 \
 )
 
+openapi_inputs=(
+    pkg/apis/certmanager/v1 \
+    pkg/apis/acme/v1 \
+    pkg/apis/meta/v1 \
+)
+
 # Generate defaulting functions to be used by the mutating webhook
 defaulter_inputs=(
   internal/apis/certmanager/v1alpha2 \
@@ -103,8 +109,9 @@ listergen=$PWD/$5
 defaultergen=$PWD/$6
 conversiongen=$PWD/$7
 applyconfigurationgen=$PWD/$8
+openapigen=$PWD/$9
 
-shift 8
+shift 9
 
 export GOROOT=$go_sdk
 
@@ -147,6 +154,19 @@ gen-deepcopy() {
     --output-base ./
 }
 
+gen-openapi() {
+    echo "Generating openapi..." >&2
+    prefixed_inputs=( "${openapi_inputs[@]/#/$module_name/}" )
+    joined=$( IFS=$','; echo "${prefixed_inputs[*]}" )
+    "$openapigen" \
+        --go-header-file hack/boilerplate/boilerplate.generatego.txt \
+        --input-dirs "$joined" \
+        --input-dirs "k8s.io/apimachinery/pkg/apis/meta/v1" \
+        --output-package ./pkg/generated/openapi \
+        --output-base ./ \
+        -O zz_generated.openapi
+}
+
 gen-applyconfigurations() {
     rm -rf "${client_subpackage}"/applyconfigurations
     echo "Generating applyconfigurations..." >&2
@@ -159,7 +179,8 @@ gen-applyconfigurations() {
     # https://github.com/istio/client-go/pull/718/files#r770894721
     "$applyconfigurationgen" \
         --go-header-file hack/boilerplate/boilerplate.generatego.txt \
-        --input-dirs "$joined",k8s.io/apimachinery/pkg/apis/meta/v1 \
+        --input-dirs "$joined" \
+        --input-dirs "k8s.io/apimachinery/pkg/apis/meta/v1" \
         --trim-path-prefix="$module_name" \
         --output-package "${client_package}"/applyconfigurations \
         --output-base ./
@@ -250,13 +271,14 @@ gen-conversions() {
 runfiles="$(pwd)"
 cd "$BUILD_WORKSPACE_DIRECTORY"
 
-gen-deepcopy
+# gen-deepcopy
+gen-openapi
 gen-applyconfigurations
-gen-clientsets
-gen-listers
-gen-informers
-gen-defaulters
-gen-conversions
+# gen-clientsets
+# gen-listers
+# gen-informers
+# gen-defaulters
+# gen-conversions
 
 ## Call update-bazel
 cd "$runfiles"

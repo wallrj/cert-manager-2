@@ -18,4 +18,6 @@ limitations under the License.
 // +k8s:deepcopy-gen=package,register
 // +groupName=cert-manager.io
 // +groupGoName=Certmanager
+// +k8s:openapi-gen=true
+
 package v1

@@ -18,4 +18,6 @@ limitations under the License.
 // +k8s:deepcopy-gen=package
 // +gencrdrefdocs:force
 // +groupName=meta.cert-manager.io
+// +k8s:openapi-gen=true
+
 package v1

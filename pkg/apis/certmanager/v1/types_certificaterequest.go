@@ -53,7 +53,6 @@ const (
 //
 // A CertificateRequest is a one-shot resource, meaning it represents a single
 // point in time request for a certificate and cannot be re-used.
-// +k8s:openapi-gen=true
 type CertificateRequest struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

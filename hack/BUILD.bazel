@@ -148,6 +148,7 @@ sh_binary(
         "$(location @io_k8s_code_generator//cmd/defaulter-gen)",
         "$(location @io_k8s_code_generator//cmd/conversion-gen)",
         "$(location @io_k8s_code_generator//cmd/applyconfiguration-gen)",
+        "$(location @io_k8s_code_generator//cmd/openapi-gen)",
         "$(location :update-bazel)",
         "$(location %s)" % GAZELLE,
         "$(location %s)" % KAZEL,
@@ -168,6 +169,7 @@ sh_binary(
         "@io_k8s_code_generator//cmd/defaulter-gen",
         "@io_k8s_code_generator//cmd/informer-gen",
         "@io_k8s_code_generator//cmd/lister-gen",
+        "@io_k8s_code_generator//cmd/openapi-gen",
     ],
     deps = [
         "@bazel_tools//tools/bash/runfiles",
@@ -187,6 +189,7 @@ sh_test(
         "$(location @io_k8s_code_generator//cmd/defaulter-gen)",
         "$(location @io_k8s_code_generator//cmd/conversion-gen)",
         "$(location @io_k8s_code_generator//cmd/applyconfiguration-gen)",
+        "$(location @io_k8s_code_generator//cmd/openapi-gen)",
         "$(location :update-bazel)",
         "$(location %s)" % GAZELLE,
         "$(location %s)" % KAZEL,
@@ -206,6 +209,7 @@ sh_test(
         "@io_k8s_code_generator//cmd/defaulter-gen",
         "@io_k8s_code_generator//cmd/informer-gen",
         "@io_k8s_code_generator//cmd/lister-gen",
+        "@io_k8s_code_generator//cmd/openapi-gen",
     ],
 )
 

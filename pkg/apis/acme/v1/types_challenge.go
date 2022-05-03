@@ -27,7 +27,6 @@ import (
 // +kubebuilder:storageversion
 
 // Challenge is a type to represent a Challenge request with an ACME server
-// +k8s:openapi-gen=true
 // +kubebuilder:printcolumn:name="State",type="string",JSONPath=".status.state"
 // +kubebuilder:printcolumn:name="Domain",type="string",JSONPath=".spec.dnsName"
 // +kubebuilder:printcolumn:name="Reason",type="string",JSONPath=".status.reason",description="",priority=1

@@ -30,7 +30,6 @@ import (
 // x509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
 //
 // The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
-// +k8s:openapi-gen=true
 type Certificate struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

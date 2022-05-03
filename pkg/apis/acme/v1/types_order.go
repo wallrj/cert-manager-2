@@ -27,7 +27,6 @@ import (
 // +kubebuilder:storageversion
 
 // Order is a type to represent an Order with an ACME server
-// +k8s:openapi-gen=true
 type Order struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata"`
