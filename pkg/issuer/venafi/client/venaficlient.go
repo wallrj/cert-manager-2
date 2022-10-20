@@ -17,13 +17,14 @@ limitations under the License.
 package client
 
 import (
+	"crypto/tls"
 	"fmt"
+	"net/http"
 	"time"
 
 	vcert "github.com/Venafi/vcert/v4"
 	"github.com/Venafi/vcert/v4/pkg/certificate"
 	"github.com/Venafi/vcert/v4/pkg/endpoint"
-	"github.com/Venafi/vcert/v4/pkg/venafi/cloud"
 	"github.com/Venafi/vcert/v4/pkg/venafi/tpp"
 	"github.com/go-logr/logr"
 	corelisters "k8s.io/client-go/listers/core/v1"
@@ -48,86 +49,41 @@ type VenafiClientBuilder func(namespace string, secretsLister corelisters.Secret
 type Interface interface {
 	RequestCertificate(csrPEM []byte, duration time.Duration, customFields []api.CustomField) (string, error)
 	RetrieveCertificate(pickupID string, csrPEM []byte, duration time.Duration, customFields []api.CustomField) ([]byte, error)
-	Ping() error
 	ReadZoneConfiguration() (*endpoint.ZoneConfiguration, error)
-	SetClient(endpoint.Connector)
-	VerifyCredentials() error
-}
-
-// Venafi is a implementation of vcert library to manager certificates from TPP or Venafi Cloud
-type Venafi struct {
-	// Namespace in which to read resources related to this Issuer from.
-	// For Issuers, this will be the namespace of the Issuer.
-	// For ClusterIssuers, this will be the cluster resource namespace.
-	namespace     string
-	secretsLister corelisters.SecretLister
-
-	vcertClient connector
-	tppClient   *tpp.Connector
-	cloudClient *cloud.Connector
-	config      *vcert.Config
 }
 
 // connector exposes a subset of the vcert Connector interface to make stubbing
 // out its functionality during tests easier.
 type connector interface {
-	Ping() (err error)
 	ReadZoneConfiguration() (config *endpoint.ZoneConfiguration, err error)
 	RequestCertificate(req *certificate.Request) (requestID string, err error)
 	RetrieveCertificate(req *certificate.Request) (certificates *certificate.PEMCollection, err error)
-	// TODO: (irbekrm) this method is never used- can it be removed?
-	RenewCertificate(req *certificate.RenewalRequest) (requestID string, err error)
+}
+
+// Venafi is a implementation of vcert library to manager certificates from TPP or Venafi Cloud
+type Venafi struct {
+	vcertClient connector
 }
 
 // New constructs a Venafi client Interface. Errors may be network errors and
 // should be considered for retrying.
 func New(namespace string, secretsLister corelisters.SecretLister, issuer cmapi.GenericIssuer, metrics *metrics.Metrics, logger logr.Logger) (Interface, error) {
-	cfg, err := configForIssuer(issuer, secretsLister, namespace)
-	if err != nil {
-		return nil, err
-	}
-
-	vcertClient, err := vcert.NewClient(cfg)
+	vcertClient, err := clientForIssuer(issuer, secretsLister, namespace)
 	if err != nil {
 		return nil, fmt.Errorf("error creating Venafi client: %s", err.Error())
 	}
-
-	var tppc *tpp.Connector
-	var cc *cloud.Connector
-
-	switch vcertClient.GetType() {
-	case endpoint.ConnectorTypeTPP:
-		c, ok := vcertClient.(*tpp.Connector)
-		if ok {
-			tppc = c
-		}
-	case endpoint.ConnectorTypeCloud:
-		c, ok := vcertClient.(*cloud.Connector)
-		if ok {
-			cc = c
-		}
-	}
-
-	instrumentedVCertClient := newInstumentedConnector(vcertClient, metrics, logger)
-
 	return &Venafi{
-		namespace:     namespace,
-		secretsLister: secretsLister,
-		vcertClient:   instrumentedVCertClient,
-		cloudClient:   cc,
-		tppClient:     tppc,
-		config:        cfg,
+		vcertClient: newInstumentedConnector(vcertClient, metrics, logger),
 	}, nil
 }
 
-// configForIssuer will convert a cert-manager Venafi issuer into a vcert.Config
-// that can be used to instantiate an API client.
-func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLister, namespace string) (*vcert.Config, error) {
+// clientForIssuer will convert a cert-manager Venafi issuer into a vcert client
+func clientForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLister, namespace string) (endpoint.Connector, error) {
 	venCfg := iss.GetSpec().Venafi
 	switch {
 	case venCfg.TPP != nil:
-		tpp := venCfg.TPP
-		tppSecret, err := secretsLister.Secrets(namespace).Get(tpp.CredentialsRef.Name)
+		tppCfg := venCfg.TPP
+		tppSecret, err := secretsLister.Secrets(namespace).Get(tppCfg.CredentialsRef.Name)
 		if err != nil {
 			return nil, err
 		}
@@ -135,29 +91,63 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 		username := string(tppSecret.Data[tppUsernameKey])
 		password := string(tppSecret.Data[tppPasswordKey])
 		accessToken := string(tppSecret.Data[tppAccessTokenKey])
-		caBundle := string(tpp.CABundle)
+		caBundle := string(tppCfg.CABundle)
 
-		return &vcert.Config{
+		// We use vcert.NewClient rather than tpp.NewClient because
+		// vcert.NewClient takes care of parsing caBundle, setting zone etc.
+		// But we skip the authentication because if a username / password is
+		// supplied, vcert will implicitly use deprecated api-key
+		// authentication.
+		cli, err := vcert.NewClient(&vcert.Config{
 			ConnectorType: endpoint.ConnectorTypeTPP,
-			BaseUrl:       tpp.URL,
+			BaseUrl:       tppCfg.URL,
 			Zone:          venCfg.Zone,
 			// always enable verbose logging for now
 			LogVerbose:      true,
 			ConnectionTrust: caBundle,
-			Credentials: &endpoint.Authentication{
-				User:        username,
-				Password:    password,
-				AccessToken: accessToken,
+			Client: &http.Client{
+				Transport: &http.Transport{
+					TLSClientConfig: &tls.Config{
+						Renegotiation: tls.RenegotiateOnceAsClient,
+					},
+				},
 			},
-			// this is needed for local development when tunneling to the TPP server
-			//Client: &http.Client{
-			//	Transport: &http.Transport{
-			//		TLSClientConfig: &tls.Config{
-			//			Renegotiation: tls.RenegotiateOnceAsClient,
-			//		},
-			//	},
-			//},
-		}, nil
+		}, false) // false makes vcert skip the authentication
+		if err != nil {
+			return nil, err
+		}
+
+		// If a username and password are supplied, perform Oauth authentication.
+		// Otherwise it is assumed that an access-token (bearer token) has been
+		// supplied which can be used when interacting with and Oauth is unnecessary.
+		if username != "" && password != "" {
+			// The Oauth authentication functions are not available in the generic
+			// endpoint.Connector only in the tpp implementation of that interface,
+			// which is why we have to do a type cast here.
+			tpp, ok := cli.(*tpp.Connector)
+			if !ok {
+				return nil, fmt.Errorf("Program error: vcert.NewClient returned an unexpected endpoint.Connector type: %T", cli)
+			}
+			// GetRefreshToken will
+			res, err := tpp.GetRefreshToken(&endpoint.Authentication{
+				User:     username,
+				Password: password,
+				ClientId: "",
+				Scope:    "",
+			})
+			if err != nil {
+				return nil, err
+			}
+			accessToken = res.Access_token
+		}
+
+		if err := cli.Authenticate(&endpoint.Authentication{
+			AccessToken: accessToken,
+		}); err != nil {
+			return nil, err
+		}
+
+		return cli, nil
 	case venCfg.Cloud != nil:
 		cloud := venCfg.Cloud
 		cloudSecret, err := secretsLister.Secrets(namespace).Get(cloud.APITokenSecretRef.Name)
@@ -171,7 +161,7 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 		}
 		apiKey := string(cloudSecret.Data[k])
 
-		return &vcert.Config{
+		return vcert.NewClient(&vcert.Config{
 			ConnectorType: endpoint.ConnectorTypeCloud,
 			BaseUrl:       cloud.URL,
 			Zone:          venCfg.Zone,
@@ -180,68 +170,13 @@ func configForIssuer(iss cmapi.GenericIssuer, secretsLister corelisters.SecretLi
 			Credentials: &endpoint.Authentication{
 				APIKey: apiKey,
 			},
-		}, nil
+		})
 	}
 	// API validation in webhook and in the ClusterIssuer and Issuer controller
 	// Sync functions should make this unreachable in production.
 	return nil, fmt.Errorf("neither Venafi Cloud or TPP configuration found")
 }
 
-func (v *Venafi) Ping() error {
-	return v.vcertClient.Ping()
-}
-
 func (v *Venafi) ReadZoneConfiguration() (*endpoint.ZoneConfiguration, error) {
 	return v.vcertClient.ReadZoneConfiguration()
-}
-
-func (v *Venafi) SetClient(client endpoint.Connector) {
-	v.vcertClient = client
-}
-
-// VerifyCredentials will remotely verify the credentials for the client, both for TPP and Cloud
-func (v *Venafi) VerifyCredentials() error {
-	switch {
-	case v.cloudClient != nil:
-		err := v.cloudClient.Authenticate(&endpoint.Authentication{
-			APIKey: v.config.Credentials.APIKey,
-		})
-
-		if err != nil {
-			return fmt.Errorf("cloudClient.Authenticate: %v", err)
-		}
-
-		return nil
-	case v.tppClient != nil:
-		if v.config.Credentials == nil {
-			return fmt.Errorf("credentials not configured")
-		}
-
-		if v.config.Credentials.AccessToken != "" {
-			_, err := v.tppClient.VerifyAccessToken(&endpoint.Authentication{
-				AccessToken: v.config.Credentials.AccessToken,
-			})
-
-			if err != nil {
-				return fmt.Errorf("tppClient.VerifyAccessToken: %v", err)
-			}
-
-			return nil
-		}
-
-		if v.config.Credentials.User != "" && v.config.Credentials.Password != "" {
-			err := v.tppClient.Authenticate(&endpoint.Authentication{
-				User:     v.config.Credentials.User,
-				Password: v.config.Credentials.Password,
-			})
-
-			if err != nil {
-				return fmt.Errorf("tppClient.Authenticate: %v", err)
-			}
-
-			return nil
-		}
-	}
-
-	return fmt.Errorf("neither tppClient or cloudClient have been set")
 }
