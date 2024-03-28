@@ -1,0 +1,3435 @@
+{
+  "timestamp": 1712327080.885342,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14
+}
+{
+  "timestamp": 1712327091.075984,
+  "certificates_count": 45,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 16146432,
+  "controller_cpu": 0.007664511000000001,
+  "cainjector_memory": 23273472,
+  "cainjector_cpu": 5.7933e-05,
+  "webhook_memory": 13344768,
+  "webhook_cpu": 0.001542919
+}
+{
+  "timestamp": 1712327100.722445,
+  "certificates_count": 95,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 16146432,
+  "controller_cpu": 0.000239699,
+  "webhook_memory": 13840384,
+  "webhook_cpu": 0.008755838
+}
+{
+  "timestamp": 1712327110.829501,
+  "certificates_count": 145,
+  "certificaterequests_count": 1,
+  "secrets_size": 702530,
+  "secrets_count": 15,
+  "controller_memory": 16146432,
+  "controller_cpu": 0.000239699,
+  "webhook_memory": 13840384,
+  "webhook_cpu": 0.008755838
+}
+{
+  "timestamp": 1712327121.318613,
+  "certificates_count": 195,
+  "certificaterequests_count": 9,
+  "secrets_size": 768939,
+  "secrets_count": 30,
+  "controller_memory": 47366144,
+  "controller_cpu": 0.6479403650000001,
+  "cainjector_memory": 35434496,
+  "cainjector_cpu": 0.012048068,
+  "webhook_memory": 13840384,
+  "webhook_cpu": 0.008755838
+}
+{
+  "timestamp": 1712327130.437151,
+  "certificates_count": 245,
+  "certificaterequests_count": 16,
+  "secrets_size": 832052,
+  "secrets_count": 44,
+  "controller_memory": 47366144,
+  "controller_cpu": 0.6479403650000001,
+  "cainjector_memory": 35434496,
+  "cainjector_cpu": 0.012048068,
+  "webhook_memory": 13840384,
+  "webhook_cpu": 0.008755838
+}
+{
+  "timestamp": 1712327141.309268,
+  "certificates_count": 295,
+  "certificaterequests_count": 26,
+  "secrets_size": 928874,
+  "secrets_count": 63,
+  "controller_memory": 49393664,
+  "controller_cpu": 2.089403172,
+  "cainjector_memory": 35799040,
+  "cainjector_cpu": 0.017716184,
+  "webhook_memory": 18006016,
+  "webhook_cpu": 0.029900341
+}
+{
+  "timestamp": 1712327151.309851,
+  "certificates_count": 345,
+  "certificaterequests_count": 35,
+  "secrets_size": 1012429,
+  "secrets_count": 79,
+  "controller_memory": 51912704,
+  "controller_cpu": 1.710907592,
+  "cainjector_memory": 36655104,
+  "cainjector_cpu": 0.017128285,
+  "webhook_memory": 18055168,
+  "webhook_cpu": 0.028890048
+}
+{
+  "timestamp": 1712327160.659622,
+  "certificates_count": 395,
+  "certificaterequests_count": 42,
+  "secrets_size": 1089227,
+  "secrets_count": 94,
+  "controller_memory": 51912704,
+  "controller_cpu": 1.710907592,
+  "cainjector_memory": 36655104,
+  "cainjector_cpu": 0.017128285,
+  "webhook_memory": 18055168,
+  "webhook_cpu": 0.028890048
+}
+{
+  "timestamp": 1712327171.443458,
+  "certificates_count": 445,
+  "certificaterequests_count": 51,
+  "secrets_size": 1169293,
+  "secrets_count": 110,
+  "controller_memory": 54575104,
+  "controller_cpu": 1.517131911,
+  "cainjector_memory": 39952384,
+  "cainjector_cpu": 0.018342093,
+  "webhook_memory": 18096128,
+  "webhook_cpu": 0.030290337
+}
+{
+  "timestamp": 1712327180.87235,
+  "certificates_count": 495,
+  "certificaterequests_count": 57,
+  "secrets_size": 1236263,
+  "secrets_count": 122,
+  "controller_memory": 56774656,
+  "controller_cpu": 2.221918896,
+  "cainjector_memory": 40153088,
+  "cainjector_cpu": 0.017666512000000002,
+  "webhook_memory": 18763776,
+  "webhook_cpu": 0.029402224
+}
+{
+  "timestamp": 1712327191.441175,
+  "certificates_count": 545,
+  "certificaterequests_count": 67,
+  "secrets_size": 1322879,
+  "secrets_count": 140,
+  "controller_memory": 56987648,
+  "controller_cpu": 1.697705103,
+  "cainjector_memory": 41103360,
+  "cainjector_cpu": 0.01860598,
+  "webhook_memory": 18436096,
+  "webhook_cpu": 0.031465088
+}
+{
+  "timestamp": 1712327201.611929,
+  "certificates_count": 595,
+  "certificaterequests_count": 76,
+  "secrets_size": 1406376,
+  "secrets_count": 156,
+  "controller_memory": 56987648,
+  "controller_cpu": 1.697705103,
+  "cainjector_memory": 41103360,
+  "cainjector_cpu": 0.01860598,
+  "webhook_memory": 18436096,
+  "webhook_cpu": 0.031465088
+}
+{
+  "timestamp": 1712327211.858518,
+  "certificates_count": 645,
+  "certificaterequests_count": 83,
+  "secrets_size": 1483172,
+  "secrets_count": 171,
+  "controller_memory": 61267968,
+  "controller_cpu": 1.785552183,
+  "cainjector_memory": 41189376,
+  "cainjector_cpu": 0.017979254,
+  "webhook_memory": 18436096,
+  "webhook_cpu": 0.031465088
+}
+{
+  "timestamp": 1712327221.364213,
+  "certificates_count": 685,
+  "certificaterequests_count": 90,
+  "secrets_size": 1546697,
+  "secrets_count": 183,
+  "controller_memory": 61964288,
+  "controller_cpu": 2.336924835,
+  "cainjector_memory": 42340352,
+  "cainjector_cpu": 0.023075449,
+  "webhook_memory": 18116608,
+  "webhook_cpu": 0.034960639
+}
+{
+  "timestamp": 1712327230.697698,
+  "certificates_count": 735,
+  "certificaterequests_count": 97,
+  "secrets_size": 1623288,
+  "secrets_count": 199,
+  "controller_memory": 61964288,
+  "controller_cpu": 2.336924835,
+  "cainjector_memory": 42340352,
+  "cainjector_cpu": 0.023075449,
+  "webhook_memory": 18116608,
+  "webhook_cpu": 0.034960639
+}
+{
+  "timestamp": 1712327241.548291,
+  "certificates_count": 780,
+  "certificaterequests_count": 107,
+  "secrets_size": 1716830,
+  "secrets_count": 217,
+  "controller_memory": 65298432,
+  "controller_cpu": 2.3627689600000004,
+  "cainjector_memory": 42422272,
+  "cainjector_cpu": 0.021656447000000002,
+  "webhook_memory": 17969152,
+  "webhook_cpu": 0.040941609000000004
+}
+{
+  "timestamp": 1712327251.359426,
+  "certificates_count": 830,
+  "certificaterequests_count": 115,
+  "secrets_size": 1790169,
+  "secrets_count": 232,
+  "controller_memory": 67932160,
+  "controller_cpu": 1.673847643,
+  "cainjector_memory": 46129152,
+  "cainjector_cpu": 0.020190018,
+  "webhook_memory": 17969152,
+  "webhook_cpu": 0.032869513
+}
+{
+  "timestamp": 1712327260.973607,
+  "certificates_count": 880,
+  "certificaterequests_count": 123,
+  "secrets_size": 1866941,
+  "secrets_count": 247,
+  "controller_memory": 67932160,
+  "controller_cpu": 1.673847643,
+  "cainjector_memory": 46129152,
+  "cainjector_cpu": 0.020190018,
+  "webhook_memory": 17969152,
+  "webhook_cpu": 0.032869513
+}
+{
+  "timestamp": 1712327271.20004,
+  "certificates_count": 930,
+  "certificaterequests_count": 132,
+  "secrets_size": 1946981,
+  "secrets_count": 263,
+  "controller_memory": 70361088,
+  "controller_cpu": 1.684225432,
+  "cainjector_memory": 46084096,
+  "cainjector_cpu": 0.019698726,
+  "webhook_memory": 17813504,
+  "webhook_cpu": 0.034086908
+}
+{
+  "timestamp": 1712327280.98078,
+  "certificates_count": 980,
+  "certificaterequests_count": 140,
+  "secrets_size": 2043811,
+  "secrets_count": 282,
+  "controller_memory": 70361088,
+  "controller_cpu": 1.684225432,
+  "cainjector_memory": 46084096,
+  "cainjector_cpu": 0.019698726,
+  "webhook_memory": 17813504,
+  "webhook_cpu": 0.034086908
+}
+{
+  "timestamp": 1712327291.586491,
+  "certificates_count": 1030,
+  "certificaterequests_count": 149,
+  "secrets_size": 2124068,
+  "secrets_count": 297,
+  "controller_memory": 74612736,
+  "controller_cpu": 1.783526712,
+  "cainjector_memory": 46096384,
+  "cainjector_cpu": 0.017537045,
+  "webhook_memory": 17936384,
+  "webhook_cpu": 0.035183657
+}
+{
+  "timestamp": 1712327301.793872,
+  "certificates_count": 1080,
+  "certificaterequests_count": 156,
+  "secrets_size": 2210835,
+  "secrets_count": 314,
+  "controller_memory": 77418496,
+  "controller_cpu": 1.3423349290000002,
+  "cainjector_memory": 49987584,
+  "cainjector_cpu": 0.021157671000000003,
+  "webhook_memory": 18690048,
+  "webhook_cpu": 0.03443259
+}
+{
+  "timestamp": 1712327311.139214,
+  "certificates_count": 1130,
+  "certificaterequests_count": 164,
+  "secrets_size": 2270893,
+  "secrets_count": 326,
+  "controller_memory": 79020032,
+  "controller_cpu": 2.4493430280000004,
+  "cainjector_memory": 49987584,
+  "cainjector_cpu": 0.021157671000000003,
+  "webhook_memory": 18092032,
+  "webhook_cpu": 0.035501271
+}
+{
+  "timestamp": 1712327320.838875,
+  "certificates_count": 1180,
+  "certificaterequests_count": 173,
+  "secrets_size": 2344226,
+  "secrets_count": 341,
+  "controller_memory": 79020032,
+  "controller_cpu": 2.4493430280000004,
+  "cainjector_memory": 49987584,
+  "cainjector_cpu": 0.021157671000000003,
+  "webhook_memory": 18092032,
+  "webhook_cpu": 0.035501271
+}
+{
+  "timestamp": 1712327330.996265,
+  "certificates_count": 1230,
+  "certificaterequests_count": 179,
+  "secrets_size": 2434504,
+  "secrets_count": 358,
+  "controller_memory": 79241216,
+  "controller_cpu": 1.6379878620000001,
+  "cainjector_memory": 50020352,
+  "cainjector_cpu": 0.019931197,
+  "webhook_memory": 18124800,
+  "webhook_cpu": 0.034339202
+}
+{
+  "timestamp": 1712327342.14269,
+  "certificates_count": 1280,
+  "certificaterequests_count": 188,
+  "secrets_size": 2494763,
+  "secrets_count": 369,
+  "controller_memory": 83042304,
+  "controller_cpu": 2.2214267320000003,
+  "cainjector_memory": 52371456,
+  "cainjector_cpu": 0.020011762000000002,
+  "webhook_memory": 18198528,
+  "webhook_cpu": 0.030955626000000003
+}
+{
+  "timestamp": 1712327351.677094,
+  "certificates_count": 1330,
+  "certificaterequests_count": 194,
+  "secrets_size": 2554825,
+  "secrets_count": 381,
+  "controller_memory": 83042304,
+  "controller_cpu": 2.2214267320000003,
+  "cainjector_memory": 52371456,
+  "cainjector_cpu": 0.020011762000000002,
+  "webhook_memory": 18198528,
+  "webhook_cpu": 0.030955626000000003
+}
+{
+  "timestamp": 1712327362.400648,
+  "certificates_count": 1380,
+  "certificaterequests_count": 203,
+  "secrets_size": 2635104,
+  "secrets_count": 396,
+  "controller_memory": 83226624,
+  "controller_cpu": 1.764290801,
+  "cainjector_memory": 52396032,
+  "cainjector_cpu": 0.018265652,
+  "webhook_memory": 18382848,
+  "webhook_cpu": 0.032166307000000005
+}
+{
+  "timestamp": 1712327371.85081,
+  "certificates_count": 1425,
+  "certificaterequests_count": 209,
+  "secrets_size": 2698418,
+  "secrets_count": 409,
+  "controller_memory": 86810624,
+  "controller_cpu": 2.150526724,
+  "cainjector_memory": 52396032,
+  "cainjector_cpu": 0.018265652,
+  "webhook_memory": 17981440,
+  "webhook_cpu": 0.040380806000000005
+}
+{
+  "timestamp": 1712327381.793443,
+  "certificates_count": 1475,
+  "certificaterequests_count": 216,
+  "secrets_size": 2771749,
+  "secrets_count": 424,
+  "controller_memory": 86810624,
+  "controller_cpu": 2.150526724,
+  "cainjector_memory": 52396032,
+  "cainjector_cpu": 0.018265652,
+  "webhook_memory": 17981440,
+  "webhook_cpu": 0.040380806000000005
+}
+{
+  "timestamp": 1712327391.449385,
+  "certificates_count": 1525,
+  "certificaterequests_count": 222,
+  "secrets_size": 2838558,
+  "secrets_count": 437,
+  "controller_memory": 90157056,
+  "controller_cpu": 2.5541982720000003,
+  "cainjector_memory": 54640640,
+  "cainjector_cpu": 0.024101486000000002,
+  "webhook_memory": 18321408,
+  "webhook_cpu": 0.039858446000000006
+}
+{
+  "timestamp": 1712327401.628388,
+  "certificates_count": 1575,
+  "certificaterequests_count": 231,
+  "secrets_size": 2912082,
+  "secrets_count": 451,
+  "controller_memory": 90329088,
+  "controller_cpu": 2.2956471730000003,
+  "cainjector_memory": 54681600,
+  "cainjector_cpu": 0.022071767000000003,
+  "webhook_memory": 18354176,
+  "webhook_cpu": 0.039900427
+}
+{
+  "timestamp": 1712327411.229107,
+  "certificates_count": 1620,
+  "certificaterequests_count": 238,
+  "secrets_size": 2969037,
+  "secrets_count": 461,
+  "controller_memory": 90329088,
+  "controller_cpu": 2.2956471730000003,
+  "cainjector_memory": 54681600,
+  "cainjector_cpu": 0.022071767000000003,
+  "webhook_memory": 18354176,
+  "webhook_cpu": 0.039900427
+}
+{
+  "timestamp": 1712327421.423621,
+  "certificates_count": 1670,
+  "certificaterequests_count": 245,
+  "secrets_size": 3042372,
+  "secrets_count": 476,
+  "controller_memory": 94666752,
+  "controller_cpu": 1.9787414460000001,
+  "cainjector_memory": 54726656,
+  "cainjector_cpu": 0.020150718,
+  "webhook_memory": 18571264,
+  "webhook_cpu": 0.037504159
+}
+{
+  "timestamp": 1712327431.560486,
+  "certificates_count": 1725,
+  "certificaterequests_count": 252,
+  "secrets_size": 3122247,
+  "secrets_count": 493,
+  "controller_memory": 94666752,
+  "controller_cpu": 1.9787414460000001,
+  "cainjector_memory": 54726656,
+  "cainjector_cpu": 0.020150718,
+  "webhook_memory": 18571264,
+  "webhook_cpu": 0.037504159
+}
+{
+  "timestamp": 1712327441.461852,
+  "certificates_count": 1775,
+  "certificaterequests_count": 262,
+  "secrets_size": 3195964,
+  "secrets_count": 506,
+  "controller_memory": 99274752,
+  "controller_cpu": 2.355735445,
+  "cainjector_memory": 56946688,
+  "cainjector_cpu": 0.022927943000000003,
+  "webhook_memory": 18378752,
+  "webhook_cpu": 0.036884397
+}
+{
+  "timestamp": 1712327451.381581,
+  "certificates_count": 1820,
+  "certificaterequests_count": 269,
+  "secrets_size": 3266011,
+  "secrets_count": 520,
+  "controller_memory": 103342080,
+  "controller_cpu": 1.821148918,
+  "cainjector_memory": 57090048,
+  "cainjector_cpu": 0.021711387000000002,
+  "webhook_memory": 18202624,
+  "webhook_cpu": 0.037532066
+}
+{
+  "timestamp": 1712327461.669687,
+  "certificates_count": 1875,
+  "certificaterequests_count": 277,
+  "secrets_size": 3342791,
+  "secrets_count": 535,
+  "controller_memory": 103342080,
+  "controller_cpu": 1.821148918,
+  "cainjector_memory": 57090048,
+  "cainjector_cpu": 0.021711387000000002,
+  "webhook_memory": 18202624,
+  "webhook_cpu": 0.037532066
+}
+{
+  "timestamp": 1712327471.697632,
+  "certificates_count": 1924,
+  "certificaterequests_count": 283,
+  "secrets_size": 3413039,
+  "secrets_count": 548,
+  "controller_memory": 105545728,
+  "controller_cpu": 1.8509638720000001,
+  "cainjector_memory": 56971264,
+  "cainjector_cpu": 0.021908304,
+  "webhook_memory": 18526208,
+  "webhook_cpu": 0.042027437
+}
+{
+  "timestamp": 1712327482.097535,
+  "certificates_count": 1970,
+  "certificaterequests_count": 292,
+  "secrets_size": 3496574,
+  "secrets_count": 564,
+  "controller_memory": 105615360,
+  "controller_cpu": 2.003920623,
+  "cainjector_memory": 59297792,
+  "cainjector_cpu": 0.024493209000000002,
+  "webhook_memory": 18296832,
+  "webhook_cpu": 0.041440670000000006
+}
+{
+  "timestamp": 1712327492.056816,
+  "certificates_count": 2015,
+  "certificaterequests_count": 299,
+  "secrets_size": 3549873,
+  "secrets_count": 575,
+  "controller_memory": 110125056,
+  "controller_cpu": 1.9171351680000002,
+  "cainjector_memory": 59314176,
+  "cainjector_cpu": 0.022928872000000003,
+  "webhook_memory": 18022400,
+  "webhook_cpu": 0.038844772
+}
+{
+  "timestamp": 1712327502.017004,
+  "certificates_count": 2064,
+  "certificaterequests_count": 306,
+  "secrets_size": 3633412,
+  "secrets_count": 591,
+  "controller_memory": 110125056,
+  "controller_cpu": 1.9171351680000002,
+  "cainjector_memory": 59314176,
+  "cainjector_cpu": 0.022928872000000003,
+  "webhook_memory": 18022400,
+  "webhook_cpu": 0.038844772
+}
+{
+  "timestamp": 1712327511.801256,
+  "certificates_count": 2075,
+  "certificaterequests_count": 315,
+  "secrets_size": 3713273,
+  "secrets_count": 608,
+  "controller_memory": 110034944,
+  "controller_cpu": 2.5917830050000004,
+  "cainjector_memory": 59322368,
+  "cainjector_cpu": 0.021781092000000002,
+  "webhook_memory": 18350080,
+  "webhook_cpu": 0.038886897000000004
+}
+{
+  "timestamp": 1712327522.077421,
+  "certificates_count": 2075,
+  "certificaterequests_count": 323,
+  "secrets_size": 3793743,
+  "secrets_count": 622,
+  "controller_memory": 112205824,
+  "controller_cpu": 1.8463440130000002,
+  "cainjector_memory": 59326464,
+  "cainjector_cpu": 0.015124299,
+  "webhook_memory": 18571264,
+  "webhook_cpu": 0.020714285000000002
+}
+{
+  "timestamp": 1712327532.182787,
+  "certificates_count": 2075,
+  "certificaterequests_count": 332,
+  "secrets_size": 3877127,
+  "secrets_count": 639,
+  "controller_memory": 112205824,
+  "controller_cpu": 1.8463440130000002,
+  "cainjector_memory": 59326464,
+  "cainjector_cpu": 0.015124299,
+  "webhook_memory": 18571264,
+  "webhook_cpu": 0.020714285000000002
+}
+{
+  "timestamp": 1712327542.47182,
+  "certificates_count": 2075,
+  "certificaterequests_count": 339,
+  "secrets_size": 3953732,
+  "secrets_count": 655,
+  "controller_memory": 114401280,
+  "controller_cpu": 2.2535892140000002,
+  "cainjector_memory": 62660608,
+  "cainjector_cpu": 0.017361374000000002,
+  "webhook_memory": 18604032,
+  "webhook_cpu": 0.022138498000000003
+}
+{
+  "timestamp": 1712327552.138361,
+  "certificates_count": 2075,
+  "certificaterequests_count": 349,
+  "secrets_size": 4030711,
+  "secrets_count": 669,
+  "controller_memory": 116539392,
+  "controller_cpu": 2.175680466,
+  "cainjector_memory": 62582784,
+  "cainjector_cpu": 0.011898887,
+  "webhook_memory": 18640896,
+  "webhook_cpu": 0.023345821000000003
+}
+{
+  "timestamp": 1712327562.253458,
+  "certificates_count": 2075,
+  "certificaterequests_count": 355,
+  "secrets_size": 4110968,
+  "secrets_count": 684,
+  "controller_memory": 116539392,
+  "controller_cpu": 2.175680466,
+  "cainjector_memory": 62582784,
+  "cainjector_cpu": 0.011898887,
+  "webhook_memory": 18640896,
+  "webhook_cpu": 0.023345821000000003
+}
+{
+  "timestamp": 1712327571.927743,
+  "certificates_count": 2075,
+  "certificaterequests_count": 364,
+  "secrets_size": 4177554,
+  "secrets_count": 698,
+  "controller_memory": 116658176,
+  "controller_cpu": 2.088047093,
+  "cainjector_memory": 62595072,
+  "cainjector_cpu": 0.012036497,
+  "webhook_memory": 18853888,
+  "webhook_cpu": 0.022319598000000003
+}
+{
+  "timestamp": 1712327582.503285,
+  "certificates_count": 2075,
+  "certificaterequests_count": 373,
+  "secrets_size": 4284194,
+  "secrets_count": 720,
+  "controller_memory": 116658176,
+  "controller_cpu": 2.088047093,
+  "cainjector_memory": 62590976,
+  "cainjector_cpu": 0.011889269000000001,
+  "webhook_memory": 18591744,
+  "webhook_cpu": 0.022486133000000002
+}
+{
+  "timestamp": 1712327592.401903,
+  "certificates_count": 2075,
+  "certificaterequests_count": 382,
+  "secrets_size": 4364451,
+  "secrets_count": 735,
+  "controller_memory": 116658176,
+  "controller_cpu": 2.088047093,
+  "cainjector_memory": 62590976,
+  "cainjector_cpu": 0.011889269000000001,
+  "webhook_memory": 18591744,
+  "webhook_cpu": 0.022486133000000002
+}
+{
+  "timestamp": 1712327602.932371,
+  "certificates_count": 2075,
+  "certificaterequests_count": 392,
+  "secrets_size": 4441219,
+  "secrets_count": 750,
+  "controller_memory": 119238656,
+  "controller_cpu": 1.891709604,
+  "cainjector_memory": 62590976,
+  "cainjector_cpu": 0.011889269000000001,
+  "webhook_memory": 18477056,
+  "webhook_cpu": 0.023328634
+}
+{
+  "timestamp": 1712327612.303269,
+  "certificates_count": 2075,
+  "certificaterequests_count": 400,
+  "secrets_size": 4528058,
+  "secrets_count": 767,
+  "controller_memory": 119259136,
+  "controller_cpu": 1.9316509560000001,
+  "cainjector_memory": 63115264,
+  "cainjector_cpu": 0.012486288000000002,
+  "webhook_memory": 18477056,
+  "webhook_cpu": 0.023328634
+}
+{
+  "timestamp": 1712327622.322071,
+  "certificates_count": 2075,
+  "certificaterequests_count": 410,
+  "secrets_size": 4621598,
+  "secrets_count": 785,
+  "controller_memory": 119259136,
+  "controller_cpu": 1.9316509560000001,
+  "cainjector_memory": 63115264,
+  "cainjector_cpu": 0.012486288000000002,
+  "webhook_memory": 18477056,
+  "webhook_cpu": 0.023328634
+}
+{
+  "timestamp": 1712327632.750782,
+  "certificates_count": 2075,
+  "certificaterequests_count": 418,
+  "secrets_size": 4702038,
+  "secrets_count": 799,
+  "controller_memory": 121221120,
+  "controller_cpu": 1.7850183860000002,
+  "cainjector_memory": 67682304,
+  "cainjector_cpu": 0.012955969000000001,
+  "webhook_memory": 18403328,
+  "webhook_cpu": 0.021262166000000002
+}
+{
+  "timestamp": 1712327642.465935,
+  "certificates_count": 2075,
+  "certificaterequests_count": 426,
+  "secrets_size": 4778623,
+  "secrets_count": 815,
+  "controller_memory": 123359232,
+  "controller_cpu": 2.044735265,
+  "cainjector_memory": 67682304,
+  "cainjector_cpu": 0.012955969000000001,
+  "webhook_memory": 18436096,
+  "webhook_cpu": 0.021324423000000002
+}
+{
+  "timestamp": 1712327652.683382,
+  "certificates_count": 2075,
+  "certificaterequests_count": 434,
+  "secrets_size": 4855427,
+  "secrets_count": 830,
+  "controller_memory": 123359232,
+  "controller_cpu": 2.044735265,
+  "cainjector_memory": 67682304,
+  "cainjector_cpu": 0.012955969000000001,
+  "webhook_memory": 18436096,
+  "webhook_cpu": 0.021324423000000002
+}
+{
+  "timestamp": 1712327662.525253,
+  "certificates_count": 2075,
+  "certificaterequests_count": 445,
+  "secrets_size": 4952267,
+  "secrets_count": 849,
+  "controller_memory": 123359232,
+  "controller_cpu": 2.044735265,
+  "cainjector_memory": 67698688,
+  "cainjector_cpu": 0.011598151000000001,
+  "webhook_memory": 18636800,
+  "webhook_cpu": 0.020522317
+}
+{
+  "timestamp": 1712327672.728012,
+  "certificates_count": 2075,
+  "certificaterequests_count": 454,
+  "secrets_size": 5052351,
+  "secrets_count": 869,
+  "controller_memory": 123363328,
+  "controller_cpu": 1.412798097,
+  "cainjector_memory": 67727360,
+  "cainjector_cpu": 0.011322688000000001,
+  "webhook_memory": 18681856,
+  "webhook_cpu": 0.020048197
+}
+{
+  "timestamp": 1712327682.949843,
+  "certificates_count": 2075,
+  "certificaterequests_count": 463,
+  "secrets_size": 5122782,
+  "secrets_count": 881,
+  "controller_memory": 123363328,
+  "controller_cpu": 1.412798097,
+  "cainjector_memory": 67727360,
+  "cainjector_cpu": 0.011322688000000001,
+  "webhook_memory": 18681856,
+  "webhook_cpu": 0.020048197
+}
+{
+  "timestamp": 1712327692.846417,
+  "certificates_count": 2075,
+  "certificaterequests_count": 472,
+  "secrets_size": 5199379,
+  "secrets_count": 897,
+  "controller_memory": 127483904,
+  "controller_cpu": 1.620478941,
+  "cainjector_memory": 67776512,
+  "cainjector_cpu": 0.011443695,
+  "webhook_memory": 18300928,
+  "webhook_cpu": 0.021344383
+}
+{
+  "timestamp": 1712327702.766008,
+  "certificates_count": 2075,
+  "certificaterequests_count": 482,
+  "secrets_size": 5302934,
+  "secrets_count": 917,
+  "controller_memory": 127770624,
+  "controller_cpu": 1.5777062830000002,
+  "cainjector_memory": 67932160,
+  "cainjector_cpu": 0.012027597000000001,
+  "webhook_memory": 18546688,
+  "webhook_cpu": 0.020235054000000002
+}
+{
+  "timestamp": 1712327712.755891,
+  "certificates_count": 2075,
+  "certificaterequests_count": 490,
+  "secrets_size": 5403008,
+  "secrets_count": 937,
+  "controller_memory": 127770624,
+  "controller_cpu": 1.5777062830000002,
+  "cainjector_memory": 67932160,
+  "cainjector_cpu": 0.012027597000000001,
+  "webhook_memory": 18546688,
+  "webhook_cpu": 0.020235054000000002
+}
+{
+  "timestamp": 1712327723.043869,
+  "certificates_count": 2075,
+  "certificaterequests_count": 500,
+  "secrets_size": 5473254,
+  "secrets_count": 950,
+  "controller_memory": 129937408,
+  "controller_cpu": 1.9509365690000002,
+  "cainjector_memory": 70107136,
+  "cainjector_cpu": 0.012675299000000001,
+  "webhook_memory": 18624512,
+  "webhook_cpu": 0.021683579
+}
+{
+  "timestamp": 1712327733.315559,
+  "certificates_count": 2075,
+  "certificaterequests_count": 508,
+  "secrets_size": 5546591,
+  "secrets_count": 965,
+  "controller_memory": 132255744,
+  "controller_cpu": 1.7023180310000001,
+  "cainjector_memory": 70107136,
+  "cainjector_cpu": 0.012675299000000001,
+  "webhook_memory": 18489344,
+  "webhook_cpu": 0.020806771
+}
+{
+  "timestamp": 1712327743.402376,
+  "certificates_count": 2075,
+  "certificaterequests_count": 515,
+  "secrets_size": 5636869,
+  "secrets_count": 982,
+  "controller_memory": 132255744,
+  "controller_cpu": 1.7023180310000001,
+  "cainjector_memory": 70107136,
+  "cainjector_cpu": 0.012675299000000001,
+  "webhook_memory": 18489344,
+  "webhook_cpu": 0.020806771
+}
+{
+  "timestamp": 1712327753.246143,
+  "certificates_count": 2075,
+  "certificaterequests_count": 524,
+  "secrets_size": 5703845,
+  "secrets_count": 994,
+  "controller_memory": 132145152,
+  "controller_cpu": 1.6251324960000002,
+  "cainjector_memory": 70115328,
+  "cainjector_cpu": 0.011016916,
+  "webhook_memory": 18968576,
+  "webhook_cpu": 0.021027535
+}
+{
+  "timestamp": 1712327763.337079,
+  "certificates_count": 2075,
+  "certificaterequests_count": 532,
+  "secrets_size": 5783909,
+  "secrets_count": 1010,
+  "controller_memory": 134565888,
+  "controller_cpu": 2.212337782,
+  "cainjector_memory": 70123520,
+  "cainjector_cpu": 0.012023712,
+  "webhook_memory": 18657280,
+  "webhook_cpu": 0.021573377
+}
+{
+  "timestamp": 1712327773.397723,
+  "certificates_count": 2075,
+  "certificaterequests_count": 540,
+  "secrets_size": 5870728,
+  "secrets_count": 1027,
+  "controller_memory": 134565888,
+  "controller_cpu": 2.212337782,
+  "cainjector_memory": 70123520,
+  "cainjector_cpu": 0.012023712,
+  "webhook_memory": 18657280,
+  "webhook_cpu": 0.021573377
+}
+{
+  "timestamp": 1712327783.427105,
+  "certificates_count": 2075,
+  "certificaterequests_count": 549,
+  "secrets_size": 5947552,
+  "secrets_count": 1042,
+  "controller_memory": 136585216,
+  "controller_cpu": 1.8482433290000002,
+  "cainjector_memory": 70127616,
+  "cainjector_cpu": 0.010571854,
+  "webhook_memory": 18796544,
+  "webhook_cpu": 0.019063322
+}
+{
+  "timestamp": 1712327793.655375,
+  "certificates_count": 2075,
+  "certificaterequests_count": 559,
+  "secrets_size": 6034353,
+  "secrets_count": 1059,
+  "controller_memory": 139018240,
+  "controller_cpu": 1.95487548,
+  "cainjector_memory": 70156288,
+  "cainjector_cpu": 0.012391409,
+  "webhook_memory": 18489344,
+  "webhook_cpu": 0.020780749
+}
+{
+  "timestamp": 1712327803.884347,
+  "certificates_count": 2075,
+  "certificaterequests_count": 566,
+  "secrets_size": 6111338,
+  "secrets_count": 1073,
+  "controller_memory": 139018240,
+  "controller_cpu": 1.95487548,
+  "cainjector_memory": 70156288,
+  "cainjector_cpu": 0.012391409,
+  "webhook_memory": 18489344,
+  "webhook_cpu": 0.020780749
+}
+{
+  "timestamp": 1712327813.878181,
+  "certificates_count": 2075,
+  "certificaterequests_count": 577,
+  "secrets_size": 6198145,
+  "secrets_count": 1090,
+  "controller_memory": 139169792,
+  "controller_cpu": 2.289299723,
+  "cainjector_memory": 70410240,
+  "cainjector_cpu": 0.014727977000000001,
+  "webhook_memory": 18509824,
+  "webhook_cpu": 0.023375657
+}
+{
+  "timestamp": 1712327824.028185,
+  "certificates_count": 2075,
+  "certificaterequests_count": 584,
+  "secrets_size": 6285199,
+  "secrets_count": 1106,
+  "controller_memory": 138928128,
+  "controller_cpu": 2.4518727900000004,
+  "cainjector_memory": 70434816,
+  "cainjector_cpu": 0.009874256000000001,
+  "webhook_memory": 18526208,
+  "webhook_cpu": 0.019847276
+}
+{
+  "timestamp": 1712327833.840968,
+  "certificates_count": 2075,
+  "certificaterequests_count": 594,
+  "secrets_size": 6355250,
+  "secrets_count": 1120,
+  "controller_memory": 138928128,
+  "controller_cpu": 2.4518727900000004,
+  "cainjector_memory": 70434816,
+  "cainjector_cpu": 0.009874256000000001,
+  "webhook_memory": 18526208,
+  "webhook_cpu": 0.019847276
+}
+{
+  "timestamp": 1712327843.950681,
+  "certificates_count": 2075,
+  "certificaterequests_count": 604,
+  "secrets_size": 6455338,
+  "secrets_count": 1140,
+  "controller_memory": 139866112,
+  "controller_cpu": 2.524005541,
+  "cainjector_memory": 70459392,
+  "cainjector_cpu": 0.010718905,
+  "webhook_memory": 18804736,
+  "webhook_cpu": 0.019770631
+}
+{
+  "timestamp": 1712327853.84709,
+  "certificates_count": 2075,
+  "certificaterequests_count": 611,
+  "secrets_size": 6552351,
+  "secrets_count": 1158,
+  "controller_memory": 140087296,
+  "controller_cpu": 2.09596098,
+  "cainjector_memory": 70447104,
+  "cainjector_cpu": 0.010243389,
+  "webhook_memory": 18829312,
+  "webhook_cpu": 0.023313599
+}
+{
+  "timestamp": 1712327864.558788,
+  "certificates_count": 2075,
+  "certificaterequests_count": 622,
+  "secrets_size": 6632397,
+  "secrets_count": 1174,
+  "controller_memory": 140087296,
+  "controller_cpu": 2.09596098,
+  "cainjector_memory": 70447104,
+  "cainjector_cpu": 0.010243389,
+  "webhook_memory": 18829312,
+  "webhook_cpu": 0.023313599
+}
+{
+  "timestamp": 1712327874.519089,
+  "certificates_count": 2075,
+  "certificaterequests_count": 632,
+  "secrets_size": 6725758,
+  "secrets_count": 1193,
+  "controller_memory": 145068032,
+  "controller_cpu": 2.379088856,
+  "cainjector_memory": 70459392,
+  "cainjector_cpu": 0.010600541000000002,
+  "webhook_memory": 18575360,
+  "webhook_cpu": 0.020516183
+}
+{
+  "timestamp": 1712327883.862268,
+  "certificates_count": 2075,
+  "certificaterequests_count": 640,
+  "secrets_size": 6802586,
+  "secrets_count": 1208,
+  "controller_memory": 145260544,
+  "controller_cpu": 2.549661528,
+  "cainjector_memory": 70713344,
+  "cainjector_cpu": 0.00994158,
+  "webhook_memory": 18575360,
+  "webhook_cpu": 0.020516183
+}
+{
+  "timestamp": 1712327894.530914,
+  "certificates_count": 2075,
+  "certificaterequests_count": 650,
+  "secrets_size": 6886324,
+  "secrets_count": 1223,
+  "controller_memory": 145260544,
+  "controller_cpu": 2.549661528,
+  "cainjector_memory": 70713344,
+  "cainjector_cpu": 0.00994158,
+  "webhook_memory": 18575360,
+  "webhook_cpu": 0.020516183
+}
+{
+  "timestamp": 1712327904.378772,
+  "certificates_count": 2075,
+  "certificaterequests_count": 656,
+  "secrets_size": 6973095,
+  "secrets_count": 1240,
+  "controller_memory": 145862656,
+  "controller_cpu": 2.231018384,
+  "cainjector_memory": 70832128,
+  "cainjector_cpu": 0.009248094,
+  "webhook_memory": 18604032,
+  "webhook_cpu": 0.02084025
+}
+{
+  "timestamp": 1712327914.251929,
+  "certificates_count": 2075,
+  "certificaterequests_count": 667,
+  "secrets_size": 7053149,
+  "secrets_count": 1256,
+  "controller_memory": 148242432,
+  "controller_cpu": 3.455231582,
+  "cainjector_memory": 70983680,
+  "cainjector_cpu": 0.011006323,
+  "webhook_memory": 18767872,
+  "webhook_cpu": 0.019803605000000002
+}
+{
+  "timestamp": 1712327924.373528,
+  "certificates_count": 2075,
+  "certificaterequests_count": 675,
+  "secrets_size": 7129951,
+  "secrets_count": 1271,
+  "controller_memory": 148242432,
+  "controller_cpu": 3.455231582,
+  "cainjector_memory": 70983680,
+  "cainjector_cpu": 0.011006323,
+  "webhook_memory": 18767872,
+  "webhook_cpu": 0.019803605000000002
+}
+{
+  "timestamp": 1712327932.478048,
+  "certificates_count": 2075,
+  "certificaterequests_count": 683,
+  "secrets_size": 7216965,
+  "secrets_count": 1287,
+  "controller_memory": 152125440,
+  "controller_cpu": 2.161074679,
+  "cainjector_memory": 73936896,
+  "cainjector_cpu": 0.010901533000000001,
+  "webhook_memory": 18755584,
+  "webhook_cpu": 0.019388005
+}
+{
+  "timestamp": 1712327942.293037,
+  "certificates_count": 2075,
+  "certificaterequests_count": 693,
+  "secrets_size": 7313733,
+  "secrets_count": 1306,
+  "controller_memory": 152125440,
+  "controller_cpu": 2.161074679,
+  "cainjector_memory": 73936896,
+  "cainjector_cpu": 0.010901533000000001,
+  "webhook_memory": 18755584,
+  "webhook_cpu": 0.019388005
+}
+{
+  "timestamp": 1712327952.897465,
+  "certificates_count": 2075,
+  "certificaterequests_count": 702,
+  "secrets_size": 7403808,
+  "secrets_count": 1324,
+  "controller_memory": 152018944,
+  "controller_cpu": 2.557733138,
+  "cainjector_memory": 73957376,
+  "cainjector_cpu": 0.008811231000000001,
+  "webhook_memory": 19038208,
+  "webhook_cpu": 0.018840654000000002
+}
+{
+  "timestamp": 1712327962.872737,
+  "certificates_count": 2075,
+  "certificaterequests_count": 713,
+  "secrets_size": 7494082,
+  "secrets_count": 1341,
+  "controller_memory": 152018944,
+  "controller_cpu": 2.557733138,
+  "cainjector_memory": 73957376,
+  "cainjector_cpu": 0.008811231000000001,
+  "webhook_memory": 18735104,
+  "webhook_cpu": 0.015573010000000002
+}
+{
+  "timestamp": 1712327972.912831,
+  "certificates_count": 2075,
+  "certificaterequests_count": 721,
+  "secrets_size": 7590900,
+  "secrets_count": 1360,
+  "controller_memory": 154103808,
+  "controller_cpu": 2.5776997670000004,
+  "cainjector_memory": 75456512,
+  "cainjector_cpu": 0.006429075,
+  "webhook_memory": 20799488,
+  "webhook_cpu": 0.01684838
+}
+{
+  "timestamp": 1712327982.685836,
+  "certificates_count": 2075,
+  "certificaterequests_count": 732,
+  "secrets_size": 7684637,
+  "secrets_count": 1377,
+  "controller_memory": 154103808,
+  "controller_cpu": 2.5776997670000004,
+  "cainjector_memory": 75456512,
+  "cainjector_cpu": 0.006429075,
+  "webhook_memory": 20799488,
+  "webhook_cpu": 0.01684838
+}
+{
+  "timestamp": 1712327993.120762,
+  "certificates_count": 2075,
+  "certificaterequests_count": 740,
+  "secrets_size": 7781262,
+  "secrets_count": 1397,
+  "controller_memory": 156196864,
+  "controller_cpu": 2.360410345,
+  "cainjector_memory": 75329536,
+  "cainjector_cpu": 0.0064389930000000005,
+  "webhook_memory": 21082112,
+  "webhook_cpu": 0.014731621
+}
+{
+  "timestamp": 1712328002.702988,
+  "certificates_count": 2075,
+  "certificaterequests_count": 750,
+  "secrets_size": 7851546,
+  "secrets_count": 1410,
+  "controller_memory": 156323840,
+  "controller_cpu": 2.692730954,
+  "cainjector_memory": 75333632,
+  "cainjector_cpu": 0.007114198,
+  "webhook_memory": 21217280,
+  "webhook_cpu": 0.016744878
+}
+{
+  "timestamp": 1712328013.237145,
+  "certificates_count": 2075,
+  "certificaterequests_count": 760,
+  "secrets_size": 7944901,
+  "secrets_count": 1429,
+  "controller_memory": 156323840,
+  "controller_cpu": 2.692730954,
+  "cainjector_memory": 75333632,
+  "cainjector_cpu": 0.007114198,
+  "webhook_memory": 21217280,
+  "webhook_cpu": 0.016744878
+}
+{
+  "timestamp": 1712328023.195502,
+  "certificates_count": 2075,
+  "certificaterequests_count": 770,
+  "secrets_size": 8035159,
+  "secrets_count": 1446,
+  "controller_memory": 156323840,
+  "controller_cpu": 2.692730954,
+  "cainjector_memory": 75337728,
+  "cainjector_cpu": 0.006582509,
+  "webhook_memory": 21233664,
+  "webhook_cpu": 0.015282141
+}
+{
+  "timestamp": 1712328033.046493,
+  "certificates_count": 2075,
+  "certificaterequests_count": 781,
+  "secrets_size": 8138931,
+  "secrets_count": 1465,
+  "controller_memory": 158982144,
+  "controller_cpu": 2.357154753,
+  "cainjector_memory": 75337728,
+  "cainjector_cpu": 0.006582509,
+  "webhook_memory": 21209088,
+  "webhook_cpu": 0.016610583
+}
+{
+  "timestamp": 1712328043.003802,
+  "certificates_count": 2075,
+  "certificaterequests_count": 791,
+  "secrets_size": 8239045,
+  "secrets_count": 1485,
+  "controller_memory": 158982144,
+  "controller_cpu": 2.357154753,
+  "cainjector_memory": 75337728,
+  "cainjector_cpu": 0.006582509,
+  "webhook_memory": 21209088,
+  "webhook_cpu": 0.016610583
+}
+{
+  "timestamp": 1712328053.206092,
+  "certificates_count": 2075,
+  "certificaterequests_count": 801,
+  "secrets_size": 8322568,
+  "secrets_count": 1501,
+  "controller_memory": 158982144,
+  "controller_cpu": 2.357154753,
+  "cainjector_memory": 75350016,
+  "cainjector_cpu": 0.009210237000000001,
+  "webhook_memory": 21225472,
+  "webhook_cpu": 0.015346908000000001
+}
+{
+  "timestamp": 1712328063.54145,
+  "certificates_count": 2075,
+  "certificaterequests_count": 811,
+  "secrets_size": 8425936,
+  "secrets_count": 1522,
+  "controller_memory": 163024896,
+  "controller_cpu": 2.316654282,
+  "cainjector_memory": 75354112,
+  "cainjector_cpu": 0.006248595,
+  "webhook_memory": 21352448,
+  "webhook_cpu": 0.016100404000000002
+}
+{
+  "timestamp": 1712328073.702619,
+  "certificates_count": 2075,
+  "certificaterequests_count": 819,
+  "secrets_size": 8523160,
+  "secrets_count": 1539,
+  "controller_memory": 163024896,
+  "controller_cpu": 2.316654282,
+  "cainjector_memory": 75354112,
+  "cainjector_cpu": 0.006248595,
+  "webhook_memory": 21352448,
+  "webhook_cpu": 0.016100404000000002
+}
+{
+  "timestamp": 1712328083.781943,
+  "certificates_count": 2075,
+  "certificaterequests_count": 830,
+  "secrets_size": 8603218,
+  "secrets_count": 1555,
+  "controller_memory": 163024896,
+  "controller_cpu": 2.316654282,
+  "cainjector_memory": 75337728,
+  "cainjector_cpu": 0.006723581,
+  "webhook_memory": 21348352,
+  "webhook_cpu": 0.017309268000000003
+}
+{
+  "timestamp": 1712328093.857345,
+  "certificates_count": 2075,
+  "certificaterequests_count": 841,
+  "secrets_size": 8693116,
+  "secrets_count": 1574,
+  "controller_memory": 162910208,
+  "controller_cpu": 2.6411391810000002,
+  "cainjector_memory": 75350016,
+  "cainjector_cpu": 0.006830143,
+  "webhook_memory": 21741568,
+  "webhook_cpu": 0.015787325
+}
+{
+  "timestamp": 1712328103.665988,
+  "certificates_count": 2075,
+  "certificaterequests_count": 849,
+  "secrets_size": 8796838,
+  "secrets_count": 1593,
+  "controller_memory": 162910208,
+  "controller_cpu": 2.6411391810000002,
+  "cainjector_memory": 75350016,
+  "cainjector_cpu": 0.006830143,
+  "webhook_memory": 21741568,
+  "webhook_cpu": 0.015787325
+}
+{
+  "timestamp": 1712328113.533294,
+  "certificates_count": 2075,
+  "certificaterequests_count": 858,
+  "secrets_size": 8890193,
+  "secrets_count": 1612,
+  "controller_memory": 165457920,
+  "controller_cpu": 2.705547967,
+  "cainjector_memory": 75350016,
+  "cainjector_cpu": 0.00669886,
+  "webhook_memory": 21258240,
+  "webhook_cpu": 0.015995007000000002
+}
+{
+  "timestamp": 1712328123.36786,
+  "certificates_count": 2075,
+  "certificaterequests_count": 869,
+  "secrets_size": 8990458,
+  "secrets_count": 1631,
+  "controller_memory": 165715968,
+  "controller_cpu": 2.5068855400000003,
+  "cainjector_memory": 75341824,
+  "cainjector_cpu": 0.006530142,
+  "webhook_memory": 21458944,
+  "webhook_cpu": 0.01696721
+}
+{
+  "timestamp": 1712328133.869149,
+  "certificates_count": 2075,
+  "certificaterequests_count": 880,
+  "secrets_size": 9087232,
+  "secrets_count": 1650,
+  "controller_memory": 165715968,
+  "controller_cpu": 2.5068855400000003,
+  "cainjector_memory": 75341824,
+  "cainjector_cpu": 0.006530142,
+  "webhook_memory": 21458944,
+  "webhook_cpu": 0.01696721
+}
+{
+  "timestamp": 1712328144.055677,
+  "certificates_count": 2075,
+  "certificaterequests_count": 892,
+  "secrets_size": 9187714,
+  "secrets_count": 1668,
+  "controller_memory": 165621760,
+  "controller_cpu": 2.006968235,
+  "cainjector_memory": 75350016,
+  "cainjector_cpu": 0.006795923000000001,
+  "webhook_memory": 21479424,
+  "webhook_cpu": 0.014684404000000002
+}
+{
+  "timestamp": 1712328154.228642,
+  "certificates_count": 2075,
+  "certificaterequests_count": 900,
+  "secrets_size": 9274515,
+  "secrets_count": 1685,
+  "controller_memory": 165621760,
+  "controller_cpu": 2.006968235,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.007264137,
+  "webhook_memory": 21311488,
+  "webhook_cpu": 0.017337181
+}
+{
+  "timestamp": 1712328163.797997,
+  "certificates_count": 2075,
+  "certificaterequests_count": 911,
+  "secrets_size": 9377875,
+  "secrets_count": 1706,
+  "controller_memory": 165621760,
+  "controller_cpu": 2.006968235,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.007264137,
+  "webhook_memory": 21311488,
+  "webhook_cpu": 0.017337181
+}
+{
+  "timestamp": 1712328173.712947,
+  "certificates_count": 2075,
+  "certificaterequests_count": 919,
+  "secrets_size": 9454840,
+  "secrets_count": 1720,
+  "controller_memory": 171802624,
+  "controller_cpu": 2.435486633,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.007264137,
+  "webhook_memory": 21278720,
+  "webhook_cpu": 0.016795991
+}
+{
+  "timestamp": 1712328184.657855,
+  "certificates_count": 2075,
+  "certificaterequests_count": 929,
+  "secrets_size": 9548201,
+  "secrets_count": 1739,
+  "controller_memory": 171675648,
+  "controller_cpu": 2.398233181,
+  "cainjector_memory": 75362304,
+  "cainjector_cpu": 0.008532382,
+  "webhook_memory": 21176320,
+  "webhook_cpu": 0.015525062000000001
+}
+{
+  "timestamp": 1712328193.941395,
+  "certificates_count": 2075,
+  "certificaterequests_count": 939,
+  "secrets_size": 9641962,
+  "secrets_count": 1756,
+  "controller_memory": 171675648,
+  "controller_cpu": 2.398233181,
+  "cainjector_memory": 75362304,
+  "cainjector_cpu": 0.008532382,
+  "webhook_memory": 21176320,
+  "webhook_cpu": 0.015525062000000001
+}
+{
+  "timestamp": 1712328204.581711,
+  "certificates_count": 2075,
+  "certificaterequests_count": 947,
+  "secrets_size": 9722038,
+  "secrets_count": 1772,
+  "controller_memory": 177975296,
+  "controller_cpu": 2.997528628,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.0064593870000000005,
+  "webhook_memory": 21512192,
+  "webhook_cpu": 0.016856568000000002
+}
+{
+  "timestamp": 1712328214.359635,
+  "certificates_count": 2075,
+  "certificaterequests_count": 959,
+  "secrets_size": 9808851,
+  "secrets_count": 1789,
+  "controller_memory": 178081792,
+  "controller_cpu": 2.5944845460000003,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.006718114000000001,
+  "webhook_memory": 21356544,
+  "webhook_cpu": 0.015741929
+}
+{
+  "timestamp": 1712328224.494955,
+  "certificates_count": 2075,
+  "certificaterequests_count": 968,
+  "secrets_size": 9905663,
+  "secrets_count": 1808,
+  "controller_memory": 178081792,
+  "controller_cpu": 2.5944845460000003,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.006718114000000001,
+  "webhook_memory": 21356544,
+  "webhook_cpu": 0.015741929
+}
+{
+  "timestamp": 1712328234.381364,
+  "certificates_count": 2075,
+  "certificaterequests_count": 978,
+  "secrets_size": 10009218,
+  "secrets_count": 1828,
+  "controller_memory": 178208768,
+  "controller_cpu": 2.312856821,
+  "cainjector_memory": 75362304,
+  "cainjector_cpu": 0.0066237100000000005,
+  "webhook_memory": 21622784,
+  "webhook_cpu": 0.0148655
+}
+{
+  "timestamp": 1712328244.501367,
+  "certificates_count": 2075,
+  "certificaterequests_count": 989,
+  "secrets_size": 10106032,
+  "secrets_count": 1847,
+  "controller_memory": 178122752,
+  "controller_cpu": 2.059514553,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.007301305,
+  "webhook_memory": 21352448,
+  "webhook_cpu": 0.017301445000000002
+}
+{
+  "timestamp": 1712328255.25709,
+  "certificates_count": 2075,
+  "certificaterequests_count": 999,
+  "secrets_size": 10206325,
+  "secrets_count": 1866,
+  "controller_memory": 178122752,
+  "controller_cpu": 2.059514553,
+  "cainjector_memory": 75358208,
+  "cainjector_cpu": 0.007301305,
+  "webhook_memory": 21352448,
+  "webhook_cpu": 0.017301445000000002
+}
+{
+  "timestamp": 1712328265.246583,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1007,
+  "secrets_size": 10276567,
+  "secrets_count": 1879,
+  "controller_memory": 180375552,
+  "controller_cpu": 2.5295874790000004,
+  "cainjector_memory": 75489280,
+  "cainjector_cpu": 0.007178734000000001,
+  "webhook_memory": 21114880,
+  "webhook_cpu": 0.017008274
+}
+{
+  "timestamp": 1712328274.732399,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1017,
+  "secrets_size": 10386646,
+  "secrets_count": 1901,
+  "controller_memory": 182550528,
+  "controller_cpu": 2.738826393,
+  "cainjector_memory": 75493376,
+  "cainjector_cpu": 0.007266924,
+  "webhook_memory": 21114880,
+  "webhook_cpu": 0.017008274
+}
+{
+  "timestamp": 1712328284.298772,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1027,
+  "secrets_size": 10490179,
+  "secrets_count": 1921,
+  "controller_memory": 182550528,
+  "controller_cpu": 2.738826393,
+  "cainjector_memory": 75493376,
+  "cainjector_cpu": 0.007266924,
+  "webhook_memory": 21114880,
+  "webhook_cpu": 0.017008274
+}
+{
+  "timestamp": 1712328294.563454,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1036,
+  "secrets_size": 10573684,
+  "secrets_count": 1937,
+  "controller_memory": 182460416,
+  "controller_cpu": 2.512195434,
+  "cainjector_memory": 77479936,
+  "cainjector_cpu": 0.009269883000000001,
+  "webhook_memory": 21610496,
+  "webhook_cpu": 0.016862912
+}
+{
+  "timestamp": 1712328305.348088,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1048,
+  "secrets_size": 10670486,
+  "secrets_count": 1956,
+  "controller_memory": 182575104,
+  "controller_cpu": 2.3903308140000004,
+  "cainjector_memory": 77496320,
+  "cainjector_cpu": 0.006735861,
+  "webhook_memory": 21364736,
+  "webhook_cpu": 0.017703498
+}
+{
+  "timestamp": 1712328315.163987,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1059,
+  "secrets_size": 10773834,
+  "secrets_count": 1977,
+  "controller_memory": 182575104,
+  "controller_cpu": 2.3903308140000004,
+  "cainjector_memory": 77496320,
+  "cainjector_cpu": 0.006735861,
+  "webhook_memory": 21364736,
+  "webhook_cpu": 0.017703498
+}
+{
+  "timestamp": 1712328325.481635,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1069,
+  "secrets_size": 10867392,
+  "secrets_count": 1995,
+  "controller_memory": 182730752,
+  "controller_cpu": 2.388456108,
+  "cainjector_memory": 77500416,
+  "cainjector_cpu": 0.006685311,
+  "webhook_memory": 21364736,
+  "webhook_cpu": 0.016227974000000003
+}
+{
+  "timestamp": 1712328335.416471,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1079,
+  "secrets_size": 10964196,
+  "secrets_count": 2014,
+  "controller_memory": 185335808,
+  "controller_cpu": 2.29540364,
+  "cainjector_memory": 77496320,
+  "cainjector_cpu": 0.006936035,
+  "webhook_memory": 21663744,
+  "webhook_cpu": 0.018836003
+}
+{
+  "timestamp": 1712328345.637826,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1089,
+  "secrets_size": 11061201,
+  "secrets_count": 2032,
+  "controller_memory": 185335808,
+  "controller_cpu": 2.29540364,
+  "cainjector_memory": 77496320,
+  "cainjector_cpu": 0.006936035,
+  "webhook_memory": 21663744,
+  "webhook_cpu": 0.018836003
+}
+{
+  "timestamp": 1712328355.377762,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1100,
+  "secrets_size": 11164778,
+  "secrets_count": 2052,
+  "controller_memory": 186261504,
+  "controller_cpu": 2.3764441520000004,
+  "cainjector_memory": 77492224,
+  "cainjector_cpu": 0.007193899,
+  "webhook_memory": 21684224,
+  "webhook_cpu": 0.017322559
+}
+{
+  "timestamp": 1712328365.568543,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1108,
+  "secrets_size": 11258135,
+  "secrets_count": 2071,
+  "controller_memory": 191664128,
+  "controller_cpu": 2.435354132,
+  "cainjector_memory": 77729792,
+  "cainjector_cpu": 0.006760515000000001,
+  "webhook_memory": 21757952,
+  "webhook_cpu": 0.015630225
+}
+{
+  "timestamp": 1712328375.217189,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1120,
+  "secrets_size": 11345141,
+  "secrets_count": 2087,
+  "controller_memory": 191664128,
+  "controller_cpu": 2.435354132,
+  "cainjector_memory": 77729792,
+  "cainjector_cpu": 0.006760515000000001,
+  "webhook_memory": 21757952,
+  "webhook_cpu": 0.015630225
+}
+{
+  "timestamp": 1712328385.264081,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1130,
+  "secrets_size": 11431964,
+  "secrets_count": 2104,
+  "controller_memory": 191758336,
+  "controller_cpu": 2.3671054160000002,
+  "cainjector_memory": 78139392,
+  "cainjector_cpu": 0.007185835000000001,
+  "webhook_memory": 21987328,
+  "webhook_cpu": 0.015751126
+}
+{
+  "timestamp": 1712328395.704261,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1140,
+  "secrets_size": 11535529,
+  "secrets_count": 2124,
+  "controller_memory": 191967232,
+  "controller_cpu": 2.425878628,
+  "cainjector_memory": 78192640,
+  "cainjector_cpu": 0.006646685,
+  "webhook_memory": 21987328,
+  "webhook_cpu": 0.015751126
+}
+{
+  "timestamp": 1712328405.766506,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1149,
+  "secrets_size": 11638895,
+  "secrets_count": 2145,
+  "controller_memory": 191967232,
+  "controller_cpu": 2.425878628,
+  "cainjector_memory": 78192640,
+  "cainjector_cpu": 0.006646685,
+  "webhook_memory": 21987328,
+  "webhook_cpu": 0.015751126
+}
+{
+  "timestamp": 1712328416.063531,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1158,
+  "secrets_size": 11709372,
+  "secrets_count": 2157,
+  "controller_memory": 191967232,
+  "controller_cpu": 2.425878628,
+  "cainjector_memory": 80748544,
+  "cainjector_cpu": 0.010396148000000001,
+  "webhook_memory": 22265856,
+  "webhook_cpu": 0.015806857
+}
+{
+  "timestamp": 1712328426.291033,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1167,
+  "secrets_size": 11806182,
+  "secrets_count": 2176,
+  "controller_memory": 193585152,
+  "controller_cpu": 2.6429824650000002,
+  "cainjector_memory": 80920576,
+  "cainjector_cpu": 0.006980527,
+  "webhook_memory": 22683648,
+  "webhook_cpu": 0.015942531
+}
+{
+  "timestamp": 1712328435.508642,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1179,
+  "secrets_size": 11912812,
+  "secrets_count": 2198,
+  "controller_memory": 193585152,
+  "controller_cpu": 2.6429824650000002,
+  "cainjector_memory": 80920576,
+  "cainjector_cpu": 0.006980527,
+  "webhook_memory": 22683648,
+  "webhook_cpu": 0.015942531
+}
+{
+  "timestamp": 1712328443.60401,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1187,
+  "secrets_size": 11999788,
+  "secrets_count": 2214,
+  "controller_memory": 194408448,
+  "controller_cpu": 2.398434978,
+  "cainjector_memory": 81264640,
+  "cainjector_cpu": 0.007062797000000001,
+  "webhook_memory": 23064576,
+  "webhook_cpu": 0.017516277
+}
+{
+  "timestamp": 1712328453.766153,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1199,
+  "secrets_size": 12096598,
+  "secrets_count": 2233,
+  "controller_memory": 194408448,
+  "controller_cpu": 2.398434978,
+  "cainjector_memory": 81264640,
+  "cainjector_cpu": 0.007062797000000001,
+  "webhook_memory": 23064576,
+  "webhook_cpu": 0.017516277
+}
+{
+  "timestamp": 1712328464.393513,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1209,
+  "secrets_size": 12193408,
+  "secrets_count": 2252,
+  "controller_memory": 198574080,
+  "controller_cpu": 1.9823555130000001,
+  "cainjector_memory": 81690624,
+  "cainjector_cpu": 0.007347875,
+  "webhook_memory": 23752704,
+  "webhook_cpu": 0.019074617000000002
+}
+{
+  "timestamp": 1712328474.254205,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1219,
+  "secrets_size": 12300223,
+  "secrets_count": 2273,
+  "controller_memory": 201547776,
+  "controller_cpu": 2.2796647880000003,
+  "cainjector_memory": 81981440,
+  "cainjector_cpu": 0.006969829,
+  "webhook_memory": 24162304,
+  "webhook_cpu": 0.017495859000000002
+}
+{
+  "timestamp": 1712328484.256465,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1230,
+  "secrets_size": 12393958,
+  "secrets_count": 2290,
+  "controller_memory": 201547776,
+  "controller_cpu": 2.2796647880000003,
+  "cainjector_memory": 81981440,
+  "cainjector_cpu": 0.006969829,
+  "webhook_memory": 24289280,
+  "webhook_cpu": 0.015867419
+}
+{
+  "timestamp": 1712328493.970721,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1236,
+  "secrets_size": 12470758,
+  "secrets_count": 2305,
+  "controller_memory": 201547776,
+  "controller_cpu": 2.2796647880000003,
+  "cainjector_memory": 81981440,
+  "cainjector_cpu": 0.006969829,
+  "webhook_memory": 24289280,
+  "webhook_cpu": 0.015867419
+}
+{
+  "timestamp": 1712328504.454733,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1248,
+  "secrets_size": 12557565,
+  "secrets_count": 2322,
+  "controller_memory": 203939840,
+  "controller_cpu": 2.520407173,
+  "cainjector_memory": 82759680,
+  "cainjector_cpu": 0.007114242000000001,
+  "webhook_memory": 24539136,
+  "webhook_cpu": 0.016047904
+}
+{
+  "timestamp": 1712328514.554065,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1258,
+  "secrets_size": 12657635,
+  "secrets_count": 2342,
+  "controller_memory": 206409728,
+  "controller_cpu": 2.97078986,
+  "cainjector_memory": 82759680,
+  "cainjector_cpu": 0.006519076,
+  "webhook_memory": 24276992,
+  "webhook_cpu": 0.016842548000000002
+}
+{
+  "timestamp": 1712328524.965946,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1268,
+  "secrets_size": 12761196,
+  "secrets_count": 2362,
+  "controller_memory": 206409728,
+  "controller_cpu": 2.97078986,
+  "cainjector_memory": 82759680,
+  "cainjector_cpu": 0.006519076,
+  "webhook_memory": 24276992,
+  "webhook_cpu": 0.016842548000000002
+}
+{
+  "timestamp": 1712328534.370981,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1277,
+  "secrets_size": 12848174,
+  "secrets_count": 2378,
+  "controller_memory": 208785408,
+  "controller_cpu": 2.1413358870000003,
+  "cainjector_memory": 87650304,
+  "cainjector_cpu": 0.009004656,
+  "webhook_memory": 25608192,
+  "webhook_cpu": 0.016175357
+}
+{
+  "timestamp": 1712328544.941093,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1288,
+  "secrets_size": 12938060,
+  "secrets_count": 2397,
+  "controller_memory": 208392192,
+  "controller_cpu": 2.777115653,
+  "cainjector_memory": 87441408,
+  "cainjector_cpu": 0.005800255000000001,
+  "webhook_memory": 25624576,
+  "webhook_cpu": 0.014949276000000001
+}
+{
+  "timestamp": 1712328554.646022,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1297,
+  "secrets_size": 13044859,
+  "secrets_count": 2418,
+  "controller_memory": 208392192,
+  "controller_cpu": 2.777115653,
+  "cainjector_memory": 87441408,
+  "cainjector_cpu": 0.005800255000000001,
+  "webhook_memory": 25624576,
+  "webhook_cpu": 0.014949276000000001
+}
+{
+  "timestamp": 1712328564.717472,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1308,
+  "secrets_size": 13148380,
+  "secrets_count": 2438,
+  "controller_memory": 208797696,
+  "controller_cpu": 2.836856001,
+  "cainjector_memory": 87441408,
+  "cainjector_cpu": 0.0066274260000000005,
+  "webhook_memory": 26038272,
+  "webhook_cpu": 0.017069083000000002
+}
+{
+  "timestamp": 1712328574.625522,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1317,
+  "secrets_size": 13225359,
+  "secrets_count": 2452,
+  "controller_memory": 211599360,
+  "controller_cpu": 2.649562254,
+  "cainjector_memory": 87609344,
+  "cainjector_cpu": 0.006909593,
+  "webhook_memory": 25980928,
+  "webhook_cpu": 0.017202601
+}
+{
+  "timestamp": 1712328585.227191,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1325,
+  "secrets_size": 13312174,
+  "secrets_count": 2469,
+  "controller_memory": 211599360,
+  "controller_cpu": 2.649562254,
+  "cainjector_memory": 87609344,
+  "cainjector_cpu": 0.006909593,
+  "webhook_memory": 25980928,
+  "webhook_cpu": 0.017202601
+}
+{
+  "timestamp": 1712328595.229323,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1336,
+  "secrets_size": 13405495,
+  "secrets_count": 2488,
+  "controller_memory": 212938752,
+  "controller_cpu": 2.726981159,
+  "cainjector_memory": 87646208,
+  "cainjector_cpu": 0.006596432,
+  "webhook_memory": 25849856,
+  "webhook_cpu": 0.014612502000000001
+}
+{
+  "timestamp": 1712328605.051902,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1344,
+  "secrets_size": 13482476,
+  "secrets_count": 2502,
+  "controller_memory": 215068672,
+  "controller_cpu": 2.571108541,
+  "cainjector_memory": 87646208,
+  "cainjector_cpu": 0.006512559,
+  "webhook_memory": 26869760,
+  "webhook_cpu": 0.016967309
+}
+{
+  "timestamp": 1712328614.77779,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1355,
+  "secrets_size": 13589269,
+  "secrets_count": 2523,
+  "controller_memory": 215068672,
+  "controller_cpu": 2.571108541,
+  "cainjector_memory": 87646208,
+  "cainjector_cpu": 0.006512559,
+  "webhook_memory": 26869760,
+  "webhook_cpu": 0.016967309
+}
+{
+  "timestamp": 1712328624.918786,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1365,
+  "secrets_size": 13686274,
+  "secrets_count": 2541,
+  "controller_memory": 215068672,
+  "controller_cpu": 2.571108541,
+  "cainjector_memory": 87646208,
+  "cainjector_cpu": 0.006512559,
+  "webhook_memory": 27443200,
+  "webhook_cpu": 0.016677071
+}
+{
+  "timestamp": 1712328635.158798,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1376,
+  "secrets_size": 13773051,
+  "secrets_count": 2558,
+  "controller_memory": 217378816,
+  "controller_cpu": 2.438535594,
+  "cainjector_memory": 87687168,
+  "cainjector_cpu": 0.006471557,
+  "webhook_memory": 29413376,
+  "webhook_cpu": 0.017438891
+}
+{
+  "timestamp": 1712328645.660345,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1385,
+  "secrets_size": 13869672,
+  "secrets_count": 2578,
+  "controller_memory": 217378816,
+  "controller_cpu": 2.438535594,
+  "cainjector_memory": 87687168,
+  "cainjector_cpu": 0.006471557,
+  "webhook_memory": 29413376,
+  "webhook_cpu": 0.017438891
+}
+{
+  "timestamp": 1712328655.429035,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1395,
+  "secrets_size": 13956475,
+  "secrets_count": 2595,
+  "controller_memory": 217276416,
+  "controller_cpu": 2.891115672,
+  "cainjector_memory": 87703552,
+  "cainjector_cpu": 0.009421628000000001,
+  "webhook_memory": 29474816,
+  "webhook_cpu": 0.016892601
+}
+{
+  "timestamp": 1712328665.107945,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1405,
+  "secrets_size": 14063290,
+  "secrets_count": 2616,
+  "controller_memory": 219394048,
+  "controller_cpu": 2.6435684310000003,
+  "cainjector_memory": 87699456,
+  "cainjector_cpu": 0.006374323,
+  "webhook_memory": 29650944,
+  "webhook_cpu": 0.016141745000000002
+}
+{
+  "timestamp": 1712328675.546042,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1415,
+  "secrets_size": 14153542,
+  "secrets_count": 2633,
+  "controller_memory": 219394048,
+  "controller_cpu": 2.6435684310000003,
+  "cainjector_memory": 87699456,
+  "cainjector_cpu": 0.006374323,
+  "webhook_memory": 29650944,
+  "webhook_cpu": 0.016141745000000002
+}
+{
+  "timestamp": 1712328685.664763,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1424,
+  "secrets_size": 14250370,
+  "secrets_count": 2652,
+  "controller_memory": 219369472,
+  "controller_cpu": 2.146598753,
+  "cainjector_memory": 87834624,
+  "cainjector_cpu": 0.006474991,
+  "webhook_memory": 29650944,
+  "webhook_cpu": 0.014804043000000001
+}
+{
+  "timestamp": 1712328695.913042,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1432,
+  "secrets_size": 14330649,
+  "secrets_count": 2667,
+  "controller_memory": 222011392,
+  "controller_cpu": 3.1288900560000004,
+  "cainjector_memory": 87838720,
+  "cainjector_cpu": 0.00638847,
+  "webhook_memory": 29421568,
+  "webhook_cpu": 0.016156318
+}
+{
+  "timestamp": 1712328706.08837,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1441,
+  "secrets_size": 14400682,
+  "secrets_count": 2681,
+  "controller_memory": 222011392,
+  "controller_cpu": 3.1288900560000004,
+  "cainjector_memory": 87838720,
+  "cainjector_cpu": 0.00638847,
+  "webhook_memory": 29421568,
+  "webhook_cpu": 0.016156318
+}
+{
+  "timestamp": 1712328716.337696,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1450,
+  "secrets_size": 14490956,
+  "secrets_count": 2698,
+  "controller_memory": 222277632,
+  "controller_cpu": 2.828656152,
+  "cainjector_memory": 87834624,
+  "cainjector_cpu": 0.005695951,
+  "webhook_memory": 29429760,
+  "webhook_cpu": 0.013236428000000001
+}
+{
+  "timestamp": 1712328725.711717,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1459,
+  "secrets_size": 14571014,
+  "secrets_count": 2714,
+  "controller_memory": 225587200,
+  "controller_cpu": 3.3289592960000003,
+  "cainjector_memory": 88080384,
+  "cainjector_cpu": 0.006277806,
+  "webhook_memory": 29761536,
+  "webhook_cpu": 0.017553268
+}
+{
+  "timestamp": 1712328736.433641,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1467,
+  "secrets_size": 14657795,
+  "secrets_count": 2731,
+  "controller_memory": 225587200,
+  "controller_cpu": 3.3289592960000003,
+  "cainjector_memory": 88080384,
+  "cainjector_cpu": 0.006277806,
+  "webhook_memory": 29761536,
+  "webhook_cpu": 0.017553268
+}
+{
+  "timestamp": 1712328745.98266,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1474,
+  "secrets_size": 14741346,
+  "secrets_count": 2747,
+  "controller_memory": 226045952,
+  "controller_cpu": 2.7517352340000003,
+  "cainjector_memory": 87949312,
+  "cainjector_cpu": 0.006273706,
+  "webhook_memory": 29470720,
+  "webhook_cpu": 0.014920108000000001
+}
+{
+  "timestamp": 1712328755.863459,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1487,
+  "secrets_size": 14834882,
+  "secrets_count": 2765,
+  "controller_memory": 226254848,
+  "controller_cpu": 2.696952446,
+  "cainjector_memory": 87961600,
+  "cainjector_cpu": 0.006229231,
+  "webhook_memory": 29937664,
+  "webhook_cpu": 0.015492335000000001
+}
+{
+  "timestamp": 1712328766.384398,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1496,
+  "secrets_size": 14934944,
+  "secrets_count": 2785,
+  "controller_memory": 226254848,
+  "controller_cpu": 2.696952446,
+  "cainjector_memory": 87961600,
+  "cainjector_cpu": 0.006229231,
+  "webhook_memory": 29937664,
+  "webhook_cpu": 0.015492335000000001
+}
+{
+  "timestamp": 1712328776.092626,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1506,
+  "secrets_size": 15024981,
+  "secrets_count": 2803,
+  "controller_memory": 226287616,
+  "controller_cpu": 2.0159187380000003,
+  "cainjector_memory": 88178688,
+  "cainjector_cpu": 0.010500509,
+  "webhook_memory": 29937664,
+  "webhook_cpu": 0.015492335000000001
+}
+{
+  "timestamp": 1712328785.909944,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1516,
+  "secrets_size": 15128532,
+  "secrets_count": 2823,
+  "controller_memory": 232095744,
+  "controller_cpu": 2.9342364730000003,
+  "cainjector_memory": 88199168,
+  "cainjector_cpu": 0.0065095330000000005,
+  "webhook_memory": 29888512,
+  "webhook_cpu": 0.017010875
+}
+{
+  "timestamp": 1712328796.343508,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1529,
+  "secrets_size": 15235518,
+  "secrets_count": 2843,
+  "controller_memory": 232095744,
+  "controller_cpu": 2.9342364730000003,
+  "cainjector_memory": 88199168,
+  "cainjector_cpu": 0.0065095330000000005,
+  "webhook_memory": 29888512,
+  "webhook_cpu": 0.017010875
+}
+{
+  "timestamp": 1712328806.706536,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1538,
+  "secrets_size": 15325788,
+  "secrets_count": 2860,
+  "controller_memory": 232439808,
+  "controller_cpu": 1.8465513900000001,
+  "cainjector_memory": 88195072,
+  "cainjector_cpu": 0.0063751580000000006,
+  "webhook_memory": 29908992,
+  "webhook_cpu": 0.01748195
+}
+{
+  "timestamp": 1712328816.285439,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1547,
+  "secrets_size": 15412416,
+  "secrets_count": 2878,
+  "controller_memory": 232525824,
+  "controller_cpu": 2.850919213,
+  "cainjector_memory": 88260608,
+  "cainjector_cpu": 0.006516058000000001,
+  "webhook_memory": 29990912,
+  "webhook_cpu": 0.015833936
+}
+{
+  "timestamp": 1712328826.475318,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1556,
+  "secrets_size": 15515969,
+  "secrets_count": 2898,
+  "controller_memory": 232525824,
+  "controller_cpu": 2.850919213,
+  "cainjector_memory": 88260608,
+  "cainjector_cpu": 0.006516058000000001,
+  "webhook_memory": 29990912,
+  "webhook_cpu": 0.015833936
+}
+{
+  "timestamp": 1712328836.517625,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1568,
+  "secrets_size": 15612771,
+  "secrets_count": 2917,
+  "controller_memory": 234725376,
+  "controller_cpu": 2.5716382610000004,
+  "cainjector_memory": 88481792,
+  "cainjector_cpu": 0.006904110000000001,
+  "webhook_memory": 30076928,
+  "webhook_cpu": 0.016240789000000002
+}
+{
+  "timestamp": 1712328846.468395,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1578,
+  "secrets_size": 15706315,
+  "secrets_count": 2935,
+  "controller_memory": 234897408,
+  "controller_cpu": 2.2041191170000003,
+  "cainjector_memory": 88477696,
+  "cainjector_cpu": 0.007064961000000001,
+  "webhook_memory": 30371840,
+  "webhook_cpu": 0.017680085
+}
+{
+  "timestamp": 1712328856.591123,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1586,
+  "secrets_size": 15806590,
+  "secrets_count": 2954,
+  "controller_memory": 234897408,
+  "controller_cpu": 2.2041191170000003,
+  "cainjector_memory": 88477696,
+  "cainjector_cpu": 0.007064961000000001,
+  "webhook_memory": 30371840,
+  "webhook_cpu": 0.017680085
+}
+{
+  "timestamp": 1712328866.712673,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1598,
+  "secrets_size": 15906688,
+  "secrets_count": 2974,
+  "controller_memory": 234893312,
+  "controller_cpu": 2.510456553,
+  "cainjector_memory": 88477696,
+  "cainjector_cpu": 0.007064961000000001,
+  "webhook_memory": 30228480,
+  "webhook_cpu": 0.016928629
+}
+{
+  "timestamp": 1712328876.710639,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1609,
+  "secrets_size": 16006993,
+  "secrets_count": 2993,
+  "controller_memory": 235225088,
+  "controller_cpu": 2.387403474,
+  "cainjector_memory": 88616960,
+  "cainjector_cpu": 0.007212383,
+  "webhook_memory": 30482432,
+  "webhook_cpu": 0.016927039
+}
+{
+  "timestamp": 1712328887.396786,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1621,
+  "secrets_size": 16123823,
+  "secrets_count": 3016,
+  "controller_memory": 235225088,
+  "controller_cpu": 2.387403474,
+  "cainjector_memory": 88616960,
+  "cainjector_cpu": 0.007212383,
+  "webhook_memory": 30482432,
+  "webhook_cpu": 0.016927039
+}
+{
+  "timestamp": 1712328897.136979,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1631,
+  "secrets_size": 16220641,
+  "secrets_count": 3035,
+  "controller_memory": 237883392,
+  "controller_cpu": 2.400908524,
+  "cainjector_memory": 89526272,
+  "cainjector_cpu": 0.010089405000000001,
+  "webhook_memory": 30486528,
+  "webhook_cpu": 0.01802758
+}
+{
+  "timestamp": 1712328907.397557,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1642,
+  "secrets_size": 16314189,
+  "secrets_count": 3053,
+  "controller_memory": 238366720,
+  "controller_cpu": 2.5141449820000004,
+  "cainjector_memory": 89763840,
+  "cainjector_cpu": 0.0075417850000000005,
+  "webhook_memory": 30396416,
+  "webhook_cpu": 0.019460435
+}
+{
+  "timestamp": 1712328917.083646,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1653,
+  "secrets_size": 16421032,
+  "secrets_count": 3074,
+  "controller_memory": 238366720,
+  "controller_cpu": 2.5141449820000004,
+  "cainjector_memory": 89763840,
+  "cainjector_cpu": 0.0075417850000000005,
+  "webhook_memory": 30396416,
+  "webhook_cpu": 0.019460435
+}
+{
+  "timestamp": 1712328927.902489,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1662,
+  "secrets_size": 16514548,
+  "secrets_count": 3092,
+  "controller_memory": 239325184,
+  "controller_cpu": 2.537424626,
+  "cainjector_memory": 89964544,
+  "cainjector_cpu": 0.0071565000000000005,
+  "webhook_memory": 30396416,
+  "webhook_cpu": 0.019460435
+}
+{
+  "timestamp": 1712328936.255539,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1670,
+  "secrets_size": 16604649,
+  "secrets_count": 3110,
+  "controller_memory": 239325184,
+  "controller_cpu": 2.537424626,
+  "cainjector_memory": 89964544,
+  "cainjector_cpu": 0.0071565000000000005,
+  "webhook_memory": 30396416,
+  "webhook_cpu": 0.019460435
+}
+{
+  "timestamp": 1712328945.226073,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1681,
+  "secrets_size": 16698187,
+  "secrets_count": 3128,
+  "controller_memory": 241565696,
+  "controller_cpu": 2.2841526,
+  "cainjector_memory": 90324992,
+  "cainjector_cpu": 0.006938846,
+  "webhook_memory": 29483008,
+  "webhook_cpu": 0.017444709000000003
+}
+{
+  "timestamp": 1712328955.241912,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1691,
+  "secrets_size": 16778468,
+  "secrets_count": 3143,
+  "controller_memory": 242569216,
+  "controller_cpu": 2.814743907,
+  "cainjector_memory": 89473024,
+  "cainjector_cpu": 0.007321866000000001,
+  "webhook_memory": 29081600,
+  "webhook_cpu": 0.018077737
+}
+{
+  "timestamp": 1712328965.475372,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1700,
+  "secrets_size": 16872002,
+  "secrets_count": 3161,
+  "controller_memory": 242569216,
+  "controller_cpu": 2.814743907,
+  "cainjector_memory": 89473024,
+  "cainjector_cpu": 0.007321866000000001,
+  "webhook_memory": 29081600,
+  "webhook_cpu": 0.018077737
+}
+{
+  "timestamp": 1712328976.29613,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1711,
+  "secrets_size": 16985578,
+  "secrets_count": 3183,
+  "controller_memory": 242569216,
+  "controller_cpu": 2.814743907,
+  "cainjector_memory": 89497600,
+  "cainjector_cpu": 0.006894030000000001,
+  "webhook_memory": 29171712,
+  "webhook_cpu": 0.016036754
+}
+{
+  "timestamp": 1712328985.742683,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1719,
+  "secrets_size": 17068932,
+  "secrets_count": 3200,
+  "controller_memory": 242634752,
+  "controller_cpu": 2.5899829910000003,
+  "cainjector_memory": 89526272,
+  "cainjector_cpu": 0.007150055000000001,
+  "webhook_memory": 29171712,
+  "webhook_cpu": 0.016036754
+}
+{
+  "timestamp": 1712328995.918455,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1730,
+  "secrets_size": 17145919,
+  "secrets_count": 3214,
+  "controller_memory": 253644800,
+  "controller_cpu": 3.206894176,
+  "cainjector_memory": 90021888,
+  "cainjector_cpu": 0.0063487710000000004,
+  "webhook_memory": 29634560,
+  "webhook_cpu": 0.017405997
+}
+{
+  "timestamp": 1712329006.630149,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1738,
+  "secrets_size": 17245995,
+  "secrets_count": 3234,
+  "controller_memory": 253644800,
+  "controller_cpu": 3.206894176,
+  "cainjector_memory": 90021888,
+  "cainjector_cpu": 0.0063487710000000004,
+  "webhook_memory": 29634560,
+  "webhook_cpu": 0.017405997
+}
+{
+  "timestamp": 1712329015.845567,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1748,
+  "secrets_size": 17329514,
+  "secrets_count": 3250,
+  "controller_memory": 255963136,
+  "controller_cpu": 2.6497175950000003,
+  "cainjector_memory": 92590080,
+  "cainjector_cpu": 0.011006411,
+  "webhook_memory": 29806592,
+  "webhook_cpu": 0.015826959
+}
+{
+  "timestamp": 1712329026.187356,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1756,
+  "secrets_size": 17413228,
+  "secrets_count": 3265,
+  "controller_memory": 260083712,
+  "controller_cpu": 2.783028335,
+  "cainjector_memory": 92831744,
+  "cainjector_cpu": 0.006715283000000001,
+  "webhook_memory": 29384704,
+  "webhook_cpu": 0.017184936
+}
+{
+  "timestamp": 1712329036.600861,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1766,
+  "secrets_size": 17499826,
+  "secrets_count": 3283,
+  "controller_memory": 260083712,
+  "controller_cpu": 2.783028335,
+  "cainjector_memory": 92831744,
+  "cainjector_cpu": 0.006715283000000001,
+  "webhook_memory": 29384704,
+  "webhook_cpu": 0.017184936
+}
+{
+  "timestamp": 1712329046.222756,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1777,
+  "secrets_size": 17613382,
+  "secrets_count": 3305,
+  "controller_memory": 260251648,
+  "controller_cpu": 3.004653138,
+  "cainjector_memory": 93605888,
+  "cainjector_cpu": 0.006497139000000001,
+  "webhook_memory": 29310976,
+  "webhook_cpu": 0.015935091000000002
+}
+{
+  "timestamp": 1712329056.016414,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1788,
+  "secrets_size": 17696734,
+  "secrets_count": 3322,
+  "controller_memory": 260395008,
+  "controller_cpu": 2.847963807,
+  "cainjector_memory": 93675520,
+  "cainjector_cpu": 0.0067580520000000005,
+  "webhook_memory": 29331456,
+  "webhook_cpu": 0.017988636000000002
+}
+{
+  "timestamp": 1712329067.387003,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1798,
+  "secrets_size": 17803392,
+  "secrets_count": 3344,
+  "controller_memory": 260395008,
+  "controller_cpu": 2.847963807,
+  "cainjector_memory": 93675520,
+  "cainjector_cpu": 0.0067580520000000005,
+  "webhook_memory": 29331456,
+  "webhook_cpu": 0.017988636000000002
+}
+{
+  "timestamp": 1712329076.990733,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1807,
+  "secrets_size": 17887315,
+  "secrets_count": 3358,
+  "controller_memory": 260276224,
+  "controller_cpu": 2.2142078090000004,
+  "cainjector_memory": 93700096,
+  "cainjector_cpu": 0.007097054,
+  "webhook_memory": 29564928,
+  "webhook_cpu": 0.017616276
+}
+{
+  "timestamp": 1712329086.792032,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1817,
+  "secrets_size": 17987391,
+  "secrets_count": 3378,
+  "controller_memory": 262275072,
+  "controller_cpu": 2.880137479,
+  "cainjector_memory": 93708288,
+  "cainjector_cpu": 0.007474719,
+  "webhook_memory": 29679616,
+  "webhook_cpu": 0.017224265000000002
+}
+{
+  "timestamp": 1712329096.148527,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1827,
+  "secrets_size": 18080953,
+  "secrets_count": 3396,
+  "controller_memory": 262275072,
+  "controller_cpu": 2.880137479,
+  "cainjector_memory": 93708288,
+  "cainjector_cpu": 0.007474719,
+  "webhook_memory": 29679616,
+  "webhook_cpu": 0.017224265000000002
+}
+{
+  "timestamp": 1712329106.607115,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1837,
+  "secrets_size": 18184490,
+  "secrets_count": 3416,
+  "controller_memory": 262320128,
+  "controller_cpu": 2.976097337,
+  "cainjector_memory": 93712384,
+  "cainjector_cpu": 0.007748013000000001,
+  "webhook_memory": 29384704,
+  "webhook_cpu": 0.017050626000000003
+}
+{
+  "timestamp": 1712329116.546852,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1848,
+  "secrets_size": 18284584,
+  "secrets_count": 3436,
+  "controller_memory": 262459392,
+  "controller_cpu": 1.9918438920000001,
+  "cainjector_memory": 93757440,
+  "cainjector_cpu": 0.006899023000000001,
+  "webhook_memory": 29380608,
+  "webhook_cpu": 0.018518768
+}
+{
+  "timestamp": 1712329126.696861,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1859,
+  "secrets_size": 18404674,
+  "secrets_count": 3460,
+  "controller_memory": 262459392,
+  "controller_cpu": 1.9918438920000001,
+  "cainjector_memory": 93757440,
+  "cainjector_cpu": 0.006899023000000001,
+  "webhook_memory": 29380608,
+  "webhook_cpu": 0.018518768
+}
+{
+  "timestamp": 1712329136.938938,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1869,
+  "secrets_size": 18471636,
+  "secrets_count": 3472,
+  "controller_memory": 262324224,
+  "controller_cpu": 2.364841869,
+  "cainjector_memory": 93884416,
+  "cainjector_cpu": 0.007081076,
+  "webhook_memory": 29380608,
+  "webhook_cpu": 0.018518768
+}
+{
+  "timestamp": 1712329146.733197,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1879,
+  "secrets_size": 18578632,
+  "secrets_count": 3492,
+  "controller_memory": 268337152,
+  "controller_cpu": 2.575228714,
+  "cainjector_memory": 96141312,
+  "cainjector_cpu": 0.010234624000000001,
+  "webhook_memory": 29638656,
+  "webhook_cpu": 0.018333371
+}
+{
+  "timestamp": 1712329157.241509,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1890,
+  "secrets_size": 18681962,
+  "secrets_count": 3513,
+  "controller_memory": 268337152,
+  "controller_cpu": 2.575228714,
+  "cainjector_memory": 96141312,
+  "cainjector_cpu": 0.010234624000000001,
+  "webhook_memory": 29638656,
+  "webhook_cpu": 0.018333371
+}
+{
+  "timestamp": 1712329167.19342,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1899,
+  "secrets_size": 18765501,
+  "secrets_count": 3529,
+  "controller_memory": 268328960,
+  "controller_cpu": 2.8396806310000002,
+  "cainjector_memory": 96145408,
+  "cainjector_cpu": 0.007312571,
+  "webhook_memory": 29507584,
+  "webhook_cpu": 0.017394017
+}
+{
+  "timestamp": 1712329177.611427,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1908,
+  "secrets_size": 18862508,
+  "secrets_count": 3547,
+  "controller_memory": 268722176,
+  "controller_cpu": 3.128935325,
+  "cainjector_memory": 96145408,
+  "cainjector_cpu": 0.006545292,
+  "webhook_memory": 29491200,
+  "webhook_cpu": 0.01656411
+}
+{
+  "timestamp": 1712329187.384163,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1916,
+  "secrets_size": 18926049,
+  "secrets_count": 3559,
+  "controller_memory": 268722176,
+  "controller_cpu": 3.128935325,
+  "cainjector_memory": 96145408,
+  "cainjector_cpu": 0.006545292,
+  "webhook_memory": 29491200,
+  "webhook_cpu": 0.01656411
+}
+{
+  "timestamp": 1712329197.407449,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1925,
+  "secrets_size": 19025942,
+  "secrets_count": 3580,
+  "controller_memory": 269004800,
+  "controller_cpu": 3.059600338,
+  "cainjector_memory": 96145408,
+  "cainjector_cpu": 0.006621552,
+  "webhook_memory": 29282304,
+  "webhook_cpu": 0.017948354
+}
+{
+  "timestamp": 1712329208.624673,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1935,
+  "secrets_size": 19126026,
+  "secrets_count": 3600,
+  "controller_memory": 268857344,
+  "controller_cpu": 3.039785336,
+  "cainjector_memory": 96145408,
+  "cainjector_cpu": 0.006621552,
+  "webhook_memory": 29306880,
+  "webhook_cpu": 0.015630742
+}
+{
+  "timestamp": 1712329217.6201,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1944,
+  "secrets_size": 19206490,
+  "secrets_count": 3614,
+  "controller_memory": 268857344,
+  "controller_cpu": 3.039785336,
+  "cainjector_memory": 96145408,
+  "cainjector_cpu": 0.006621552,
+  "webhook_memory": 29306880,
+  "webhook_cpu": 0.015630742
+}
+{
+  "timestamp": 1712329227.313456,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1955,
+  "secrets_size": 19309856,
+  "secrets_count": 3635,
+  "controller_memory": 271130624,
+  "controller_cpu": 2.570527963,
+  "cainjector_memory": 96149504,
+  "cainjector_cpu": 0.006891604000000001,
+  "webhook_memory": 29597696,
+  "webhook_cpu": 0.020131727000000002
+}
+{
+  "timestamp": 1712329238.176926,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1965,
+  "secrets_size": 19406662,
+  "secrets_count": 3654,
+  "controller_memory": 270995456,
+  "controller_cpu": 2.448872626,
+  "cainjector_memory": 96149504,
+  "cainjector_cpu": 0.006938087000000001,
+  "webhook_memory": 29134848,
+  "webhook_cpu": 0.017084453
+}
+{
+  "timestamp": 1712329247.955982,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1976,
+  "secrets_size": 19490213,
+  "secrets_count": 3670,
+  "controller_memory": 270995456,
+  "controller_cpu": 2.448872626,
+  "cainjector_memory": 96149504,
+  "cainjector_cpu": 0.006938087000000001,
+  "webhook_memory": 29134848,
+  "webhook_cpu": 0.017084453
+}
+{
+  "timestamp": 1712329257.449139,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1984,
+  "secrets_size": 19590502,
+  "secrets_count": 3689,
+  "controller_memory": 270995456,
+  "controller_cpu": 2.448872626,
+  "cainjector_memory": 96034816,
+  "cainjector_cpu": 0.009277958000000001,
+  "webhook_memory": 29302784,
+  "webhook_cpu": 0.018573449000000002
+}
+{
+  "timestamp": 1712329268.745655,
+  "certificates_count": 2075,
+  "certificaterequests_count": 1995,
+  "secrets_size": 19680559,
+  "secrets_count": 3707,
+  "controller_memory": 271147008,
+  "controller_cpu": 2.688623053,
+  "cainjector_memory": 96034816,
+  "cainjector_cpu": 0.009277958000000001,
+  "webhook_memory": 29765632,
+  "webhook_cpu": 0.015967014
+}
+{
+  "timestamp": 1712329278.554769,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2002,
+  "secrets_size": 19747547,
+  "secrets_count": 3719,
+  "controller_memory": 271147008,
+  "controller_cpu": 2.688623053,
+  "cainjector_memory": 96034816,
+  "cainjector_cpu": 0.009277958000000001,
+  "webhook_memory": 29765632,
+  "webhook_cpu": 0.015967014
+}
+{
+  "timestamp": 1712329287.876635,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2011,
+  "secrets_size": 19837610,
+  "secrets_count": 3737,
+  "controller_memory": 271917056,
+  "controller_cpu": 2.670418026,
+  "cainjector_memory": 96043008,
+  "cainjector_cpu": 0.006466825000000001,
+  "webhook_memory": 29192192,
+  "webhook_cpu": 0.016150349
+}
+{
+  "timestamp": 1712329297.908283,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2021,
+  "secrets_size": 19931130,
+  "secrets_count": 3755,
+  "controller_memory": 277475328,
+  "controller_cpu": 3.548043298,
+  "cainjector_memory": 96038912,
+  "cainjector_cpu": 0.006171149000000001,
+  "webhook_memory": 29495296,
+  "webhook_cpu": 0.013467823
+}
+{
+  "timestamp": 1712329307.984494,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2031,
+  "secrets_size": 20024680,
+  "secrets_count": 3773,
+  "controller_memory": 277475328,
+  "controller_cpu": 3.548043298,
+  "cainjector_memory": 96038912,
+  "cainjector_cpu": 0.006171149000000001,
+  "webhook_memory": 29495296,
+  "webhook_cpu": 0.013467823
+}
+{
+  "timestamp": 1712329318.781433,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2041,
+  "secrets_size": 20131308,
+  "secrets_count": 3795,
+  "controller_memory": 277553152,
+  "controller_cpu": 2.586550331,
+  "cainjector_memory": 96157696,
+  "cainjector_cpu": 0.007044133,
+  "webhook_memory": 29405184,
+  "webhook_cpu": 0.016926946000000002
+}
+{
+  "timestamp": 1712329329.181002,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2052,
+  "secrets_size": 20221572,
+  "secrets_count": 3812,
+  "controller_memory": 277565440,
+  "controller_cpu": 2.278836382,
+  "cainjector_memory": 96206848,
+  "cainjector_cpu": 0.007511907000000001,
+  "webhook_memory": 29483008,
+  "webhook_cpu": 0.017758524
+}
+{
+  "timestamp": 1712329339.093554,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2062,
+  "secrets_size": 20305085,
+  "secrets_count": 3828,
+  "controller_memory": 277565440,
+  "controller_cpu": 2.278836382,
+  "cainjector_memory": 96206848,
+  "cainjector_cpu": 0.007511907000000001,
+  "webhook_memory": 29483008,
+  "webhook_cpu": 0.017758524
+}
+{
+  "timestamp": 1712329346.947491,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2072,
+  "secrets_size": 20408646,
+  "secrets_count": 3848,
+  "controller_memory": 280133632,
+  "controller_cpu": 2.7433703400000002,
+  "cainjector_memory": 96215040,
+  "cainjector_cpu": 0.007191324000000001,
+  "webhook_memory": 29618176,
+  "webhook_cpu": 0.018615649
+}
+{
+  "timestamp": 1712329356.691514,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 20364018,
+  "secrets_count": 3828,
+  "controller_memory": 280018944,
+  "controller_cpu": 2.054040467,
+  "cainjector_memory": 96231424,
+  "cainjector_cpu": 0.008284005,
+  "webhook_memory": 29642752,
+  "webhook_cpu": 0.016487047
+}
+{
+  "timestamp": 1712329367.285442,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 20249514,
+  "secrets_count": 3793,
+  "controller_memory": 280018944,
+  "controller_cpu": 2.054040467,
+  "cainjector_memory": 96231424,
+  "cainjector_cpu": 0.008284005,
+  "webhook_memory": 29642752,
+  "webhook_cpu": 0.016487047
+}
+{
+  "timestamp": 1712329376.908707,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 20134990,
+  "secrets_count": 3758,
+  "controller_memory": 280997888,
+  "controller_cpu": 0.085264804,
+  "cainjector_memory": 96231424,
+  "cainjector_cpu": 0.008284005,
+  "webhook_memory": 29642752,
+  "webhook_cpu": 0.016487047
+}
+{
+  "timestamp": 1712329387.088442,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 20017210,
+  "secrets_count": 3722,
+  "controller_memory": 292200448,
+  "controller_cpu": 0.073160766,
+  "cainjector_memory": 96243712,
+  "cainjector_cpu": 0.010059016,
+  "webhook_memory": 29220864,
+  "webhook_cpu": 0.005224319000000001
+}
+{
+  "timestamp": 1712329397.220269,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19902702,
+  "secrets_count": 3687,
+  "controller_memory": 292200448,
+  "controller_cpu": 0.073160766,
+  "cainjector_memory": 96243712,
+  "cainjector_cpu": 0.010059016,
+  "webhook_memory": 29220864,
+  "webhook_cpu": 0.005224319000000001
+}
+{
+  "timestamp": 1712329405.07701,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19807810,
+  "secrets_count": 3658,
+  "controller_memory": 293289984,
+  "controller_cpu": 0.08058174,
+  "cainjector_memory": 96247808,
+  "cainjector_cpu": 0.007570093000000001,
+  "webhook_memory": 29245440,
+  "webhook_cpu": 0.006819752
+}
+{
+  "timestamp": 1712329414.960665,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19690038,
+  "secrets_count": 3622,
+  "controller_memory": 293289984,
+  "controller_cpu": 0.08058174,
+  "cainjector_memory": 96247808,
+  "cainjector_cpu": 0.007570093000000001,
+  "webhook_memory": 29245440,
+  "webhook_cpu": 0.006819752
+}
+{
+  "timestamp": 1712329425.341766,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19575530,
+  "secrets_count": 3587,
+  "controller_memory": 294236160,
+  "controller_cpu": 0.086249691,
+  "cainjector_memory": 96243712,
+  "cainjector_cpu": 0.007611007,
+  "webhook_memory": 29245440,
+  "webhook_cpu": 0.005270155
+}
+{
+  "timestamp": 1712329435.350983,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19454474,
+  "secrets_count": 3550,
+  "controller_memory": 294334464,
+  "controller_cpu": 0.086789685,
+  "cainjector_memory": 96243712,
+  "cainjector_cpu": 0.007730626000000001,
+  "webhook_memory": 29454336,
+  "webhook_cpu": 0.0060085550000000005
+}
+{
+  "timestamp": 1712329446.888406,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19300706,
+  "secrets_count": 3503,
+  "controller_memory": 294334464,
+  "controller_cpu": 0.086789685,
+  "cainjector_memory": 96243712,
+  "cainjector_cpu": 0.007730626000000001,
+  "webhook_memory": 29454336,
+  "webhook_cpu": 0.0060085550000000005
+}
+{
+  "timestamp": 1712329456.991763,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 19025902,
+  "secrets_count": 3419,
+  "controller_memory": 294207488,
+  "controller_cpu": 0.069345312,
+  "cainjector_memory": 96247808,
+  "cainjector_cpu": 0.008391395000000001,
+  "webhook_memory": 29483008,
+  "webhook_cpu": 0.006388843000000001
+}
+{
+  "timestamp": 1712329466.770655,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 18757598,
+  "secrets_count": 3337,
+  "controller_memory": 294215680,
+  "controller_cpu": 0.17216230300000002,
+  "cainjector_memory": 96247808,
+  "cainjector_cpu": 0.008391395000000001,
+  "webhook_memory": 29216768,
+  "webhook_cpu": 0.014072037
+}
+{
+  "timestamp": 1712329476.523756,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 18482770,
+  "secrets_count": 3253,
+  "controller_memory": 294219776,
+  "controller_cpu": 0.161445172,
+  "cainjector_memory": 100950016,
+  "cainjector_cpu": 0.019269110000000002,
+  "webhook_memory": 29216768,
+  "webhook_cpu": 0.014072037
+}
+{
+  "timestamp": 1712329486.572051,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 18217754,
+  "secrets_count": 3172,
+  "controller_memory": 294219776,
+  "controller_cpu": 0.161445172,
+  "cainjector_memory": 100950016,
+  "cainjector_cpu": 0.019269110000000002,
+  "webhook_memory": 29216768,
+  "webhook_cpu": 0.014072037
+}
+{
+  "timestamp": 1712329496.916475,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 17942962,
+  "secrets_count": 3088,
+  "controller_memory": 294223872,
+  "controller_cpu": 0.20003088100000002,
+  "cainjector_memory": 107089920,
+  "cainjector_cpu": 0.023300030000000003,
+  "webhook_memory": 29433856,
+  "webhook_cpu": 0.016674664000000002
+}
+{
+  "timestamp": 1712329506.151351,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 17671402,
+  "secrets_count": 3005,
+  "controller_memory": 294232064,
+  "controller_cpu": 0.177205482,
+  "cainjector_memory": 106979328,
+  "cainjector_cpu": 0.020070951,
+  "webhook_memory": 29515776,
+  "webhook_cpu": 0.016296067
+}
+{
+  "timestamp": 1712329516.145641,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 17403150,
+  "secrets_count": 2923,
+  "controller_memory": 294232064,
+  "controller_cpu": 0.177205482,
+  "cainjector_memory": 106979328,
+  "cainjector_cpu": 0.020070951,
+  "webhook_memory": 29515776,
+  "webhook_cpu": 0.016296067
+}
+{
+  "timestamp": 1712329525.838489,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 17125062,
+  "secrets_count": 2838,
+  "controller_memory": 294232064,
+  "controller_cpu": 0.177205482,
+  "cainjector_memory": 106979328,
+  "cainjector_cpu": 0.019188929,
+  "webhook_memory": 29593600,
+  "webhook_cpu": 0.017443546
+}
+{
+  "timestamp": 1712329535.732092,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 16856806,
+  "secrets_count": 2756,
+  "controller_memory": 294244352,
+  "controller_cpu": 0.16674591500000002,
+  "cainjector_memory": 106987520,
+  "cainjector_cpu": 0.018361600000000002,
+  "webhook_memory": 29392896,
+  "webhook_cpu": 0.015930713000000003
+}
+{
+  "timestamp": 1712329545.587911,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 16585290,
+  "secrets_count": 2673,
+  "controller_memory": 294244352,
+  "controller_cpu": 0.16674591500000002,
+  "cainjector_memory": 106987520,
+  "cainjector_cpu": 0.018361600000000002,
+  "webhook_memory": 29392896,
+  "webhook_cpu": 0.015930713000000003
+}
+{
+  "timestamp": 1712329555.759516,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 16307246,
+  "secrets_count": 2588,
+  "controller_memory": 294244352,
+  "controller_cpu": 0.15212775,
+  "cainjector_memory": 106995712,
+  "cainjector_cpu": 0.018344705000000003,
+  "webhook_memory": 29540352,
+  "webhook_cpu": 0.015122561000000001
+}
+{
+  "timestamp": 1712329565.358059,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 16042254,
+  "secrets_count": 2507,
+  "controller_memory": 294256640,
+  "controller_cpu": 0.144780028,
+  "cainjector_memory": 107163648,
+  "cainjector_cpu": 0.017678859,
+  "webhook_memory": 29462528,
+  "webhook_cpu": 0.01606985
+}
+{
+  "timestamp": 1712329575.21803,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 15767438,
+  "secrets_count": 2423,
+  "controller_memory": 294256640,
+  "controller_cpu": 0.144780028,
+  "cainjector_memory": 107163648,
+  "cainjector_cpu": 0.017678859,
+  "webhook_memory": 29462528,
+  "webhook_cpu": 0.01606985
+}
+{
+  "timestamp": 1712329586.029842,
+  "certificates_count": 2075,
+  "certificaterequests_count": 2075,
+  "secrets_size": 15492638,
+  "secrets_count": 2339,
+  "controller_memory": 294256640,
+  "controller_cpu": 0.15740911600000002,
+  "cainjector_memory": 111570944,
+  "cainjector_cpu": 0.019260264000000003,
+  "webhook_memory": 29425664,
+  "webhook_cpu": 0.014536549000000001
+}
+{
+  "timestamp": 1712329596.662394,
+  "certificates_count": 1936,
+  "certificaterequests_count": 1937,
+  "secrets_size": 14341793,
+  "secrets_count": 2126,
+  "controller_memory": 294383616,
+  "controller_cpu": 0.142085657,
+  "cainjector_memory": 115367936,
+  "cainjector_cpu": 0.018219732000000002,
+  "webhook_memory": 29425664,
+  "webhook_cpu": 0.014536549000000001
+}
+{
+  "timestamp": 1712329605.657302,
+  "certificates_count": 1650,
+  "certificaterequests_count": 1645,
+  "secrets_size": 12218366,
+  "secrets_count": 1783,
+  "controller_memory": 294383616,
+  "controller_cpu": 0.142085657,
+  "cainjector_memory": 115367936,
+  "cainjector_cpu": 0.018219732000000002,
+  "webhook_memory": 29425664,
+  "webhook_cpu": 0.014536549000000001
+}
+{
+  "timestamp": 1712329615.867046,
+  "certificates_count": 1392,
+  "certificaterequests_count": 1390,
+  "secrets_size": 10271998,
+  "secrets_count": 1474,
+  "controller_memory": 280928256,
+  "controller_cpu": 0.40426196200000003,
+  "cainjector_memory": 122335232,
+  "cainjector_cpu": 0.056882269000000006,
+  "webhook_memory": 29335552,
+  "webhook_cpu": 0.01492499
+}
+{
+  "timestamp": 1712329625.152927,
+  "certificates_count": 1130,
+  "certificaterequests_count": 1130,
+  "secrets_size": 8443738,
+  "secrets_count": 1180,
+  "controller_memory": 278286336,
+  "controller_cpu": 0.38027312700000004,
+  "cainjector_memory": 122634240,
+  "cainjector_cpu": 0.076648111,
+  "webhook_memory": 29413376,
+  "webhook_cpu": 0.011828943000000001
+}
+{
+  "timestamp": 1712329633.988813,
+  "certificates_count": 872,
+  "certificaterequests_count": 865,
+  "secrets_size": 6590752,
+  "secrets_count": 889,
+  "controller_memory": 278286336,
+  "controller_cpu": 0.38027312700000004,
+  "cainjector_memory": 122634240,
+  "cainjector_cpu": 0.076648111,
+  "webhook_memory": 29413376,
+  "webhook_cpu": 0.011828943000000001
+}
+{
+  "timestamp": 1712329643.849849,
+  "certificates_count": 675,
+  "certificaterequests_count": 666,
+  "secrets_size": 5209637,
+  "secrets_count": 684,
+  "controller_memory": 278319104,
+  "controller_cpu": 0.40387027400000003,
+  "cainjector_memory": 121061376,
+  "cainjector_cpu": 0.07857425700000001,
+  "webhook_memory": 29286400,
+  "webhook_cpu": 0.009429522000000001
+}
+{
+  "timestamp": 1712329653.204513,
+  "certificates_count": 436,
+  "certificaterequests_count": 433,
+  "secrets_size": 3633241,
+  "secrets_count": 450,
+  "controller_memory": 273367040,
+  "controller_cpu": 3.543511972,
+  "cainjector_memory": 118697984,
+  "cainjector_cpu": 0.062318487000000006,
+  "webhook_memory": 29327360,
+  "webhook_cpu": 0.012683927000000001
+}
+{
+  "timestamp": 1712329662.55169,
+  "certificates_count": 200,
+  "certificaterequests_count": 185,
+  "secrets_size": 1975905,
+  "secrets_count": 204,
+  "controller_memory": 273367040,
+  "controller_cpu": 3.543511972,
+  "cainjector_memory": 118697984,
+  "cainjector_cpu": 0.062318487000000006,
+  "webhook_memory": 29327360,
+  "webhook_cpu": 0.012683927000000001
+}
+{
+  "timestamp": 1712329671.638689,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 266031104,
+  "controller_cpu": 3.4846932500000003,
+  "cainjector_memory": 116215808,
+  "cainjector_cpu": 0.062697238,
+  "webhook_memory": 29310976,
+  "webhook_cpu": 0.011747811
+}
+{
+  "timestamp": 1712329681.614951,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 264450048,
+  "controller_cpu": 1.3714732010000001,
+  "cainjector_memory": 113008640,
+  "cainjector_cpu": 0.06866593900000001,
+  "webhook_memory": 29310976,
+  "webhook_cpu": 0.0044437800000000005
+}
+{
+  "timestamp": 1712329691.648869,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 264450048,
+  "controller_cpu": 1.3714732010000001,
+  "cainjector_memory": 113008640,
+  "cainjector_cpu": 0.06866593900000001,
+  "webhook_memory": 29310976,
+  "webhook_cpu": 0.0044437800000000005
+}
+{
+  "timestamp": 1712329701.667646,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 264065024,
+  "controller_cpu": 0.008721625,
+  "cainjector_memory": 113004544,
+  "cainjector_cpu": 0.0016798870000000001,
+  "webhook_memory": 29310976,
+  "webhook_cpu": 0.0044437800000000005
+}
+{
+  "timestamp": 1712329711.740294,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 264060928,
+  "controller_cpu": 0.001147746,
+  "cainjector_memory": 113004544,
+  "cainjector_cpu": 0.0009849140000000001,
+  "webhook_memory": 29339648,
+  "webhook_cpu": 0.000551411
+}
+{
+  "timestamp": 1712329721.789214,
+  "certificates_count": 1,
+  "certificaterequests_count": 1,
+  "secrets_size": 695799,
+  "secrets_count": 14,
+  "controller_memory": 264060928,
+  "controller_cpu": 0.001147746,
+  "cainjector_memory": 113004544,
+  "cainjector_cpu": 0.0009849140000000001,
+  "webhook_memory": 29339648,
+  "webhook_cpu": 0.000551411
+}

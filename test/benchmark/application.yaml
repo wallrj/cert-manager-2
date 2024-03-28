@@ -1,0 +1,76 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: example-application-issuer
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: microservice-1
+spec:
+  commonName: microservice-1
+  secretName: microservice-1
+  privateKey:
+    algorithm: RSA
+    size: 4096
+    rotationPolicy: Always
+  issuerRef:
+    name: example-application-issuer
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: microservice-2
+spec:
+  commonName: microservice-2
+  secretName: microservice-2
+  privateKey:
+    algorithm: RSA
+    size: 4096
+    rotationPolicy: Always
+  issuerRef:
+    name: example-application-issuer
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: microservice-3
+spec:
+  commonName: microservice-3
+  secretName: microservice-3
+  privateKey:
+    algorithm: RSA
+    size: 4096
+    rotationPolicy: Always
+  issuerRef:
+    name: example-application-issuer
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: microservice-4
+spec:
+  commonName: microservice-4
+  secretName: microservice-4
+  privateKey:
+    algorithm: RSA
+    size: 4096
+    rotationPolicy: Always
+  issuerRef:
+    name: example-application-issuer
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: microservice-5
+spec:
+  commonName: microservice-5
+  secretName: microservice-5
+  privateKey:
+    algorithm: RSA
+    size: 4096
+    rotationPolicy: Always
+  issuerRef:
+    name: example-application-issuer
