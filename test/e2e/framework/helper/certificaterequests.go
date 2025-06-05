@@ -46,7 +46,9 @@ import (
 var ErrCertificateRequestFailed = errors.New("CertificateRequest failed; it has Ready status False and reason Failed")
 
 // WaitForCertificateRequestReady waits for the CertificateRequest resource to
-// enter a Ready state.
+// enter a Ready state. (Status: True).
+// If the CertificateRequest enters a failed state an ErrCertificateRequestFailed error is returned.
+// (Status: False, Reason: Failed)
 func (h *Helper) WaitForCertificateRequestReady(ctx context.Context, ns, name string, timeout time.Duration) (*cmapi.CertificateRequest, error) {
 	var cr *cmapi.CertificateRequest
 	logf, done := log.LogBackoff()
