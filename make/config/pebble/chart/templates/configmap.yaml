@@ -10,6 +10,11 @@ metadata:
 data:
   # NOTE: The externalAccountMACKeys values must match those used in `tests/e2e`.
   # The key is copied from https://github.com/letsencrypt/pebble/blob/main/test/config/pebble-config-external-account-bindings.json
+  # NOTE: Two profiles are configured but only one is used in the E2E tests. A
+  # second profile is added to demonstrate that a Pebble selects a random
+  # profile unless the client specifies one. Tests which do not specify a
+  # profile must expect to receive 123h or 456h certificates.
+  # https://github.com/letsencrypt/pebble/pull/491#issuecomment-2926689390
   config.json: |
     {
       "pebble": {
